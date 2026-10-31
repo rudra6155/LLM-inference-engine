@@ -1,0 +1,1 @@
+2026-10-30T15:20:28Z SKIPPED vllm: vLLM 0.32.0 requires Python >= 3.11 (found Python 3.10.12); falling back to llama.cpp only

@@ -1,0 +1,4 @@
+torch.profiler run for custom failed
+torch.profiler run for reference failed
+ncu not found: DRAM-throughput counters were not collected
+report failed

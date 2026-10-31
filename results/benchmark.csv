@@ -1,0 +1,3 @@
+timestamp_utc,backend,model,quant,device,prompt_tokens,new_tokens,runs,warmup,decode_tok_s,ttft_ms_p50,itl_ms_p50,itl_ms_p99,itl_ms_max,peak_vram_mib,vram_baseline_mib,vram_method,notes
+2026-10-30T13:59:49+00:00,engine,Qwen/Qwen2.5-3B-Instruct-AWQ,AWQ int4 g128,NVIDIA GeForce RTX 4060 Laptop GPU,128,128,10,2,12.9919,132.6429,74.3591,108.5912,168.0513,2899.4297,945.1914,nvml-device-level,loader=autoawq
+2026-10-30T14:17:29+00:00,engine-reference-ops,Qwen/Qwen2.5-3B-Instruct-AWQ,AWQ int4 g128,NVIDIA GeForce RTX 4060 Laptop GPU,128,128,10,2,1.4579,710.2548,681.7938,744.2199,803.5244,2856.8984,1005.7852,nvml-device-level,loader=autoawq

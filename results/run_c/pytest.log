@@ -1,0 +1,18 @@
+........................................................................ [ 37%]
+....s................................................................... [ 75%]
+.....................ss........................                          [100%]
+=============================== warnings summary ===============================
+tests/test_bench.py::test_engine_backend_runs_through_the_harness_on_a_synthetic_model
+  /usr/lib/python3.10/distutils/command/build_ext.py:13: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+    from distutils.sysconfig import customize_compiler, get_python_version
+
+tests/test_profile_scripts.py::test_measure_launch_vs_gpu_reports_instead_of_raising
+  /home/rudra6155/venvs/engine/lib/python3.10/site-packages/torch/cuda/graphs.py:84: UserWarning: The CUDA Graph is empty. This usually means that the graph was attempted to be captured on wrong device or stream. (Triggered internally at /pytorch/aten/src/ATen/cuda/CUDAGraph.cpp:206.)
+    super().capture_end()
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+SKIPPED [1] tests/test_device_decode.py:108: this machine has CUDA
+SKIPPED [1] tests/test_tune_script.py:88: this machine has a GPU
+SKIPPED [1] tests/test_tune_script.py:98: --smoke is the CPU path; on a GPU machine run the script for real
+188 passed, 3 skipped, 3 deselected, 2 warnings in 21.82s

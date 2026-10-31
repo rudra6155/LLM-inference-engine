@@ -1,0 +1,1 @@
+variant,category,launches_per_step,gpu_time_us_per_step,dram_read_MB_per_step,dram_write_MB_per_step,dram_throughput_pct_time_weighted,stall_metric_time_weighted

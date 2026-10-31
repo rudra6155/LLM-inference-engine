@@ -1,0 +1,4 @@
+timestamp_utc,backend,model,quant,device,prompt_tokens,new_tokens,runs,warmup,decode_tok_s,ttft_ms_p50,itl_ms_p50,itl_ms_p99,itl_ms_max,peak_vram_mib,vram_baseline_mib,vram_method,notes
+2026-10-30T14:57:26+00:00,engine,Qwen/Qwen2.5-3B-Instruct-AWQ,AWQ int4 g128,NVIDIA GeForce RTX 4060 Laptop GPU,128,128,10,2,11.8036,86.1941,82.1837,117.5237,152.4467,3703.8594,1266.5781,nvml-device-level,loader=autoawq
+2026-10-30T15:19:17+00:00,engine-reference-ops,Qwen/Qwen2.5-3B-Instruct-AWQ,AWQ int4 g128,NVIDIA GeForce RTX 4060 Laptop GPU,128,128,10,2,1.1541,810.1512,778.2908,1317.5011,1694.9519,3367.2617,1761.8203,nvml-device-level,loader=autoawq
+2026-10-30T15:23:44+00:00,llama.cpp,qwen2.5-3b-instruct-q4_k_m.gguf,GGUF Q4_K_M,NVIDIA GeForce RTX 4060 Laptop GPU,128,128,10,2,93.0602,34.9430,9.8040,27.2180,41.0282,2570.6172,1325.3477,nvml-device-level,flash_attn=True; n_gpu_layers=-1; tokenizer_agrees_with_hf=yes

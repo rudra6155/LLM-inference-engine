@@ -1,0 +1,849 @@
+device: NVIDIA GeForce RTX 4060 Laptop GPU; L2 33554432 B; timing: CUDA graph replay; space=standard
+== awq_gemm K=2048 N=256
+  gemm 2048x256 [0/180] DEFAULT BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 -> 6.6 us (41 GB/s)
+  gemm 2048x256 [1/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 32.9 us (8 GB/s)
+  gemm 2048x256 [2/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 20.3 us (13 GB/s)
+  gemm 2048x256 [3/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 20.4 us (13 GB/s)
+  gemm 2048x256 [4/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 25.3 us (11 GB/s)
+  gemm 2048x256 [5/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 18.2 us (15 GB/s)
+  gemm 2048x256 [6/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 18.0 us (15 GB/s)
+  gemm 2048x256 [7/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 18.8 us (15 GB/s)
+  gemm 2048x256 [8/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 14.6 us (19 GB/s)
+  gemm 2048x256 [9/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 14.5 us (19 GB/s)
+  gemm 2048x256 [10/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 18.2 us (15 GB/s)
+  gemm 2048x256 [11/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 11.7 us (23 GB/s)
+  gemm 2048x256 [12/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 11.7 us (23 GB/s)
+  gemm 2048x256 [13/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 12.9 us (21 GB/s)
+  gemm 2048x256 [14/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 12.6 us (22 GB/s)
+  gemm 2048x256 [15/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 12.3 us (22 GB/s)
+  gemm 2048x256 [16/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 14.4 us (19 GB/s)
+  gemm 2048x256 [17/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 14.7 us (19 GB/s)
+  gemm 2048x256 [18/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 12.1 us (23 GB/s)
+  gemm 2048x256 [19/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 11.5 us (24 GB/s)
+  gemm 2048x256 [20/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 26.2 us (10 GB/s)
+  gemm 2048x256 [21/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 7.8 us (35 GB/s)
+  gemm 2048x256 [22/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 8.5 us (32 GB/s)
+  gemm 2048x256 [23/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 10.4 us (26 GB/s)
+  gemm 2048x256 [24/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 12.7 us (21 GB/s)
+  gemm 2048x256 [25/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 28.3 us (10 GB/s)
+  gemm 2048x256 [26/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 5.9 us (46 GB/s)
+  gemm 2048x256 [27/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 5.8 us (47 GB/s)
+  gemm 2048x256 [28/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 10.4 us (26 GB/s)
+  gemm 2048x256 [29/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 12.6 us (22 GB/s)
+  gemm 2048x256 [30/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 15.2 us (18 GB/s)
+  gemm 2048x256 [31/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 44.6 us (6 GB/s)
+  gemm 2048x256 [32/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> 18.7 us (15 GB/s)
+  gemm 2048x256 [33/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> 18.6 us (15 GB/s)
+  gemm 2048x256 [34/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 19.9 us (14 GB/s)
+  gemm 2048x256 [35/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> 15.7 us (17 GB/s)
+  gemm 2048x256 [36/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> 15.5 us (18 GB/s)
+  gemm 2048x256 [37/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 11.8 us (23 GB/s)
+  gemm 2048x256 [38/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> 10.8 us (25 GB/s)
+  gemm 2048x256 [39/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> 10.9 us (25 GB/s)
+  gemm 2048x256 [40/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 14.2 us (19 GB/s)
+  gemm 2048x256 [41/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> 14.4 us (19 GB/s)
+  gemm 2048x256 [42/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> 12.5 us (22 GB/s)
+  gemm 2048x256 [43/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 9.0 us (30 GB/s)
+  gemm 2048x256 [44/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> 8.6 us (32 GB/s)
+  gemm 2048x256 [45/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> 8.6 us (32 GB/s)
+  gemm 2048x256 [46/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 12.7 us (21 GB/s)
+  gemm 2048x256 [47/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> 26.1 us (10 GB/s)
+  gemm 2048x256 [48/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> 8.0 us (34 GB/s)
+  gemm 2048x256 [49/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 7.0 us (39 GB/s)
+  gemm 2048x256 [50/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> 29.5 us (9 GB/s)
+  gemm 2048x256 [51/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> 6.5 us (42 GB/s)
+  gemm 2048x256 [52/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 6.0 us (45 GB/s)
+  gemm 2048x256 [53/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> 10.6 us (26 GB/s)
+  gemm 2048x256 [54/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> 13.9 us (20 GB/s)
+  gemm 2048x256 [55/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 11.6 us (24 GB/s)
+  gemm 2048x256 [56/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> 10.9 us (25 GB/s)
+  gemm 2048x256 [57/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> 13.2 us (21 GB/s)
+  gemm 2048x256 [58/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 12.6 us (22 GB/s)
+  gemm 2048x256 [59/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> 12.3 us (22 GB/s)
+  gemm 2048x256 [60/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> 12.7 us (21 GB/s)
+  gemm 2048x256 [61/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 60.7 us (4 GB/s)
+  gemm 2048x256 [62/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 44.7 us (6 GB/s)
+  gemm 2048x256 [63/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 44.7 us (6 GB/s)
+  gemm 2048x256 [64/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 36.1 us (8 GB/s)
+  gemm 2048x256 [65/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 25.9 us (10 GB/s)
+  gemm 2048x256 [66/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 26.0 us (10 GB/s)
+  gemm 2048x256 [67/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 28.3 us (10 GB/s)
+  gemm 2048x256 [68/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 24.5 us (11 GB/s)
+  gemm 2048x256 [69/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 24.5 us (11 GB/s)
+  gemm 2048x256 [70/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 22.0 us (12 GB/s)
+  gemm 2048x256 [71/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 15.0 us (18 GB/s)
+  gemm 2048x256 [72/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 15.0 us (18 GB/s)
+  gemm 2048x256 [73/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 15.2 us (18 GB/s)
+  gemm 2048x256 [74/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 13.3 us (20 GB/s)
+  gemm 2048x256 [75/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 26.1 us (10 GB/s)
+  gemm 2048x256 [76/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 12.1 us (23 GB/s)
+  gemm 2048x256 [77/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 8.8 us (31 GB/s)
+  gemm 2048x256 [78/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 13.2 us (21 GB/s)
+  gemm 2048x256 [79/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 12.8 us (21 GB/s)
+  gemm 2048x256 [80/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 11.6 us (23 GB/s)
+  gemm 2048x256 [81/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 17.4 us (16 GB/s)
+  gemm 2048x256 [82/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 10.3 us (27 GB/s)
+  gemm 2048x256 [83/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 8.5 us (32 GB/s)
+  gemm 2048x256 [84/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 23.3 us (12 GB/s)
+  gemm 2048x256 [85/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 9.9 us (27 GB/s)
+  gemm 2048x256 [86/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 20.0 us (14 GB/s)
+  gemm 2048x256 [87/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 21.4 us (13 GB/s)
+  gemm 2048x256 [88/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 9.1 us (30 GB/s)
+  gemm 2048x256 [89/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 8.5 us (32 GB/s)
+  gemm 2048x256 [90/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 15.4 us (18 GB/s)
+  gemm 2048x256 [91/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 52.4 us (5 GB/s)
+  gemm 2048x256 [92/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> 39.2 us (7 GB/s)
+  gemm 2048x256 [93/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> 39.2 us (7 GB/s)
+  gemm 2048x256 [94/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 27.3 us (10 GB/s)
+  gemm 2048x256 [95/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> 24.9 us (11 GB/s)
+  gemm 2048x256 [96/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> 25.0 us (11 GB/s)
+  gemm 2048x256 [97/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 23.9 us (11 GB/s)
+  gemm 2048x256 [98/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> 21.1 us (13 GB/s)
+  gemm 2048x256 [99/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> 21.4 us (13 GB/s)
+  gemm 2048x256 [100/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 18.5 us (15 GB/s)
+  gemm 2048x256 [101/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> 12.6 us (22 GB/s)
+  gemm 2048x256 [102/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> 12.9 us (21 GB/s)
+  gemm 2048x256 [103/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 27.4 us (10 GB/s)
+  gemm 2048x256 [104/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> 16.9 us (16 GB/s)
+  gemm 2048x256 [105/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> 16.7 us (16 GB/s)
+  gemm 2048x256 [106/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 8.8 us (31 GB/s)
+  gemm 2048x256 [107/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> 8.0 us (34 GB/s)
+  gemm 2048x256 [108/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> 13.7 us (20 GB/s)
+  gemm 2048x256 [109/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 38.2 us (7 GB/s)
+  gemm 2048x256 [110/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> 9.9 us (27 GB/s)
+  gemm 2048x256 [111/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> 29.8 us (9 GB/s)
+  gemm 2048x256 [112/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 7.5 us (36 GB/s)
+  gemm 2048x256 [113/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> 7.0 us (39 GB/s)
+  gemm 2048x256 [114/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> 18.5 us (15 GB/s)
+  gemm 2048x256 [115/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 14.6 us (19 GB/s)
+  gemm 2048x256 [116/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> 29.3 us (9 GB/s)
+  gemm 2048x256 [117/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> 11.8 us (23 GB/s)
+  gemm 2048x256 [118/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 11.3 us (24 GB/s)
+  gemm 2048x256 [119/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> 14.4 us (19 GB/s)
+  gemm 2048x256 [120/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> 14.7 us (19 GB/s)
+  gemm 2048x256 [121/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 71.8 us (4 GB/s)
+  gemm 2048x256 [122/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 61.2 us (4 GB/s)
+  gemm 2048x256 [123/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 61.0 us (4 GB/s)
+  gemm 2048x256 [124/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 80.2 us (3 GB/s)
+  gemm 2048x256 [125/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 67.6 us (4 GB/s)
+  gemm 2048x256 [126/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 67.8 us (4 GB/s)
+  gemm 2048x256 [127/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 37.4 us (7 GB/s)
+  gemm 2048x256 [128/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 34.0 us (8 GB/s)
+  gemm 2048x256 [129/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 34.1 us (8 GB/s)
+  gemm 2048x256 [130/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 42.4 us (6 GB/s)
+  gemm 2048x256 [131/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 37.7 us (7 GB/s)
+  gemm 2048x256 [132/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 37.8 us (7 GB/s)
+  gemm 2048x256 [133/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 19.8 us (14 GB/s)
+  gemm 2048x256 [134/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 31.4 us (9 GB/s)
+  gemm 2048x256 [135/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 18.1 us (15 GB/s)
+  gemm 2048x256 [136/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 22.2 us (12 GB/s)
+  gemm 2048x256 [137/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 20.2 us (13 GB/s)
+  gemm 2048x256 [138/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 20.2 us (14 GB/s)
+  gemm 2048x256 [139/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 11.4 us (24 GB/s)
+  gemm 2048x256 [140/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 22.1 us (12 GB/s)
+  gemm 2048x256 [141/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 12.9 us (21 GB/s)
+  gemm 2048x256 [142/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 25.4 us (11 GB/s)
+  gemm 2048x256 [143/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 12.3 us (22 GB/s)
+  gemm 2048x256 [144/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 17.5 us (16 GB/s)
+  gemm 2048x256 [145/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 8.3 us (33 GB/s)
+  gemm 2048x256 [146/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 31.3 us (9 GB/s)
+  gemm 2048x256 [147/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 9.7 us (28 GB/s)
+  gemm 2048x256 [148/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 17.6 us (15 GB/s)
+  gemm 2048x256 [149/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 12.0 us (23 GB/s)
+  gemm 2048x256 [150/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 25.1 us (11 GB/s)
+  gemm 2048x256 [151/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 75.7 us (4 GB/s)
+  gemm 2048x256 [152/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [153/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [154/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 74.9 us (4 GB/s)
+  gemm 2048x256 [155/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [156/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [157/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 47.3 us (6 GB/s)
+  gemm 2048x256 [158/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [159/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [160/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 44.8 us (6 GB/s)
+  gemm 2048x256 [161/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [162/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [163/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 27.4 us (10 GB/s)
+  gemm 2048x256 [164/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [165/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [166/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 25.9 us (11 GB/s)
+  gemm 2048x256 [167/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [168/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [169/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 28.0 us (10 GB/s)
+  gemm 2048x256 [170/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [171/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [172/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 27.5 us (10 GB/s)
+  gemm 2048x256 [173/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [174/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [175/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 16.5 us (17 GB/s)
+  gemm 2048x256 [176/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [177/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [178/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 10.3 us (26 GB/s)
+  gemm 2048x256 [179/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x256 [180/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+== awq_gemm K=2048 N=2048
+  gemm 2048x2048 [0/180] DEFAULT BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 -> 23.0 us (95 GB/s)
+  gemm 2048x2048 [1/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 42.2 us (52 GB/s)
+  gemm 2048x2048 [2/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 37.3 us (58 GB/s)
+  gemm 2048x2048 [3/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 35.9 us (61 GB/s)
+  gemm 2048x2048 [4/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 43.1 us (51 GB/s)
+  gemm 2048x2048 [5/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 38.1 us (57 GB/s)
+  gemm 2048x2048 [6/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 44.9 us (49 GB/s)
+  gemm 2048x2048 [7/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 34.2 us (64 GB/s)
+  gemm 2048x2048 [8/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 24.9 us (88 GB/s)
+  gemm 2048x2048 [9/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 28.5 us (77 GB/s)
+  gemm 2048x2048 [10/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 32.7 us (67 GB/s)
+  gemm 2048x2048 [11/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 30.8 us (71 GB/s)
+  gemm 2048x2048 [12/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 29.8 us (73 GB/s)
+  gemm 2048x2048 [13/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 20.8 us (105 GB/s)
+  gemm 2048x2048 [14/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 25.1 us (87 GB/s)
+  gemm 2048x2048 [15/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 25.1 us (87 GB/s)
+  gemm 2048x2048 [16/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 30.8 us (71 GB/s)
+  gemm 2048x2048 [17/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 27.2 us (80 GB/s)
+  gemm 2048x2048 [18/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 27.8 us (78 GB/s)
+  gemm 2048x2048 [19/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 21.8 us (100 GB/s)
+  gemm 2048x2048 [20/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 23.4 us (93 GB/s)
+  gemm 2048x2048 [21/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 26.5 us (82 GB/s)
+  gemm 2048x2048 [22/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 40.3 us (54 GB/s)
+  gemm 2048x2048 [23/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 39.0 us (56 GB/s)
+  gemm 2048x2048 [24/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 42.1 us (52 GB/s)
+  gemm 2048x2048 [25/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 33.0 us (66 GB/s)
+  gemm 2048x2048 [26/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 38.3 us (57 GB/s)
+  gemm 2048x2048 [27/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 41.0 us (53 GB/s)
+  gemm 2048x2048 [28/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 49.2 us (44 GB/s)
+  gemm 2048x2048 [29/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 46.9 us (46 GB/s)
+  gemm 2048x2048 [30/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 52.3 us (42 GB/s)
+  gemm 2048x2048 [31/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 48.9 us (45 GB/s)
+  gemm 2048x2048 [32/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> 48.0 us (45 GB/s)
+  gemm 2048x2048 [33/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> 48.6 us (45 GB/s)
+  gemm 2048x2048 [34/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 45.7 us (48 GB/s)
+  gemm 2048x2048 [35/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> 41.7 us (52 GB/s)
+  gemm 2048x2048 [36/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> 42.2 us (52 GB/s)
+  gemm 2048x2048 [37/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 33.1 us (66 GB/s)
+  gemm 2048x2048 [38/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> 33.8 us (65 GB/s)
+  gemm 2048x2048 [39/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> 42.4 us (51 GB/s)
+  gemm 2048x2048 [40/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 44.3 us (49 GB/s)
+  gemm 2048x2048 [41/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> 38.3 us (57 GB/s)
+  gemm 2048x2048 [42/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> 39.1 us (56 GB/s)
+  gemm 2048x2048 [43/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 30.2 us (72 GB/s)
+  gemm 2048x2048 [44/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> 32.4 us (67 GB/s)
+  gemm 2048x2048 [45/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> 39.5 us (55 GB/s)
+  gemm 2048x2048 [46/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 40.0 us (54 GB/s)
+  gemm 2048x2048 [47/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> 39.0 us (56 GB/s)
+  gemm 2048x2048 [48/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> 38.6 us (57 GB/s)
+  gemm 2048x2048 [49/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 30.6 us (71 GB/s)
+  gemm 2048x2048 [50/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> 37.7 us (58 GB/s)
+  gemm 2048x2048 [51/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> 48.2 us (45 GB/s)
+  gemm 2048x2048 [52/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 46.8 us (47 GB/s)
+  gemm 2048x2048 [53/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> 45.9 us (48 GB/s)
+  gemm 2048x2048 [54/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> 50.9 us (43 GB/s)
+  gemm 2048x2048 [55/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 50.1 us (43 GB/s)
+  gemm 2048x2048 [56/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> 45.8 us (48 GB/s)
+  gemm 2048x2048 [57/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> 59.6 us (37 GB/s)
+  gemm 2048x2048 [58/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 53.8 us (41 GB/s)
+  gemm 2048x2048 [59/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> 58.4 us (37 GB/s)
+  gemm 2048x2048 [60/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> 66.9 us (33 GB/s)
+  gemm 2048x2048 [61/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 124.0 us (18 GB/s)
+  gemm 2048x2048 [62/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 67.9 us (32 GB/s)
+  gemm 2048x2048 [63/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 66.7 us (33 GB/s)
+  gemm 2048x2048 [64/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 50.8 us (43 GB/s)
+  gemm 2048x2048 [65/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 37.6 us (58 GB/s)
+  gemm 2048x2048 [66/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 40.1 us (54 GB/s)
+  gemm 2048x2048 [67/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 45.5 us (48 GB/s)
+  gemm 2048x2048 [68/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 43.5 us (50 GB/s)
+  gemm 2048x2048 [69/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 44.0 us (50 GB/s)
+  gemm 2048x2048 [70/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 30.8 us (71 GB/s)
+  gemm 2048x2048 [71/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 23.8 us (92 GB/s)
+  gemm 2048x2048 [72/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 24.0 us (91 GB/s)
+  gemm 2048x2048 [73/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 33.2 us (66 GB/s)
+  gemm 2048x2048 [74/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 31.4 us (69 GB/s)
+  gemm 2048x2048 [75/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 41.4 us (53 GB/s)
+  gemm 2048x2048 [76/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 21.4 us (102 GB/s)
+  gemm 2048x2048 [77/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 25.1 us (87 GB/s)
+  gemm 2048x2048 [78/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 25.6 us (85 GB/s)
+  gemm 2048x2048 [79/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 31.9 us (68 GB/s)
+  gemm 2048x2048 [80/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 33.1 us (66 GB/s)
+  gemm 2048x2048 [81/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 50.9 us (43 GB/s)
+  gemm 2048x2048 [82/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 30.3 us (72 GB/s)
+  gemm 2048x2048 [83/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 30.1 us (72 GB/s)
+  gemm 2048x2048 [84/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 34.2 us (64 GB/s)
+  gemm 2048x2048 [85/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 42.4 us (51 GB/s)
+  gemm 2048x2048 [86/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 46.2 us (47 GB/s)
+  gemm 2048x2048 [87/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 53.2 us (41 GB/s)
+  gemm 2048x2048 [88/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 33.0 us (66 GB/s)
+  gemm 2048x2048 [89/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 36.0 us (61 GB/s)
+  gemm 2048x2048 [90/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 36.8 us (59 GB/s)
+  gemm 2048x2048 [91/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 90.2 us (24 GB/s)
+  gemm 2048x2048 [92/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> 65.7 us (33 GB/s)
+  gemm 2048x2048 [93/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> 63.7 us (34 GB/s)
+  gemm 2048x2048 [94/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 44.2 us (49 GB/s)
+  gemm 2048x2048 [95/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> 35.3 us (62 GB/s)
+  gemm 2048x2048 [96/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> 34.1 us (64 GB/s)
+  gemm 2048x2048 [97/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 41.0 us (53 GB/s)
+  gemm 2048x2048 [98/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> 58.7 us (37 GB/s)
+  gemm 2048x2048 [99/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> 60.0 us (36 GB/s)
+  gemm 2048x2048 [100/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 31.8 us (68 GB/s)
+  gemm 2048x2048 [101/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> 31.1 us (70 GB/s)
+  gemm 2048x2048 [102/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> 31.0 us (70 GB/s)
+  gemm 2048x2048 [103/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 32.1 us (68 GB/s)
+  gemm 2048x2048 [104/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> 39.0 us (56 GB/s)
+  gemm 2048x2048 [105/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> 39.4 us (55 GB/s)
+  gemm 2048x2048 [106/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 26.4 us (83 GB/s)
+  gemm 2048x2048 [107/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> 25.4 us (86 GB/s)
+  gemm 2048x2048 [108/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> 26.4 us (83 GB/s)
+  gemm 2048x2048 [109/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 28.3 us (77 GB/s)
+  gemm 2048x2048 [110/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> 41.3 us (53 GB/s)
+  gemm 2048x2048 [111/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> 41.5 us (53 GB/s)
+  gemm 2048x2048 [112/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 28.0 us (78 GB/s)
+  gemm 2048x2048 [113/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> 28.4 us (77 GB/s)
+  gemm 2048x2048 [114/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> 28.5 us (76 GB/s)
+  gemm 2048x2048 [115/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 32.0 us (68 GB/s)
+  gemm 2048x2048 [116/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> 47.3 us (46 GB/s)
+  gemm 2048x2048 [117/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> 47.9 us (46 GB/s)
+  gemm 2048x2048 [118/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 33.8 us (64 GB/s)
+  gemm 2048x2048 [119/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> 34.6 us (63 GB/s)
+  gemm 2048x2048 [120/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> 35.3 us (62 GB/s)
+  gemm 2048x2048 [121/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 89.0 us (24 GB/s)
+  gemm 2048x2048 [122/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 61.7 us (35 GB/s)
+  gemm 2048x2048 [123/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 61.7 us (35 GB/s)
+  gemm 2048x2048 [124/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 82.3 us (26 GB/s)
+  gemm 2048x2048 [125/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 68.2 us (32 GB/s)
+  gemm 2048x2048 [126/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 68.3 us (32 GB/s)
+  gemm 2048x2048 [127/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 40.5 us (54 GB/s)
+  gemm 2048x2048 [128/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 39.4 us (55 GB/s)
+  gemm 2048x2048 [129/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 39.5 us (55 GB/s)
+  gemm 2048x2048 [130/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 46.4 us (47 GB/s)
+  gemm 2048x2048 [131/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 42.1 us (52 GB/s)
+  gemm 2048x2048 [132/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 44.0 us (49 GB/s)
+  gemm 2048x2048 [133/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 24.4 us (89 GB/s)
+  gemm 2048x2048 [134/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 39.6 us (55 GB/s)
+  gemm 2048x2048 [135/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 40.1 us (54 GB/s)
+  gemm 2048x2048 [136/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 30.6 us (71 GB/s)
+  gemm 2048x2048 [137/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 42.5 us (51 GB/s)
+  gemm 2048x2048 [138/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 44.0 us (50 GB/s)
+  gemm 2048x2048 [139/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 25.5 us (85 GB/s)
+  gemm 2048x2048 [140/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 32.3 us (67 GB/s)
+  gemm 2048x2048 [141/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 33.2 us (66 GB/s)
+  gemm 2048x2048 [142/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 27.9 us (78 GB/s)
+  gemm 2048x2048 [143/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 40.4 us (54 GB/s)
+  gemm 2048x2048 [144/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 42.6 us (51 GB/s)
+  gemm 2048x2048 [145/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 27.9 us (78 GB/s)
+  gemm 2048x2048 [146/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 41.8 us (52 GB/s)
+  gemm 2048x2048 [147/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 41.8 us (52 GB/s)
+  gemm 2048x2048 [148/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 33.9 us (64 GB/s)
+  gemm 2048x2048 [149/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 49.3 us (44 GB/s)
+  gemm 2048x2048 [150/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 47.9 us (46 GB/s)
+  gemm 2048x2048 [151/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 95.6 us (23 GB/s)
+  gemm 2048x2048 [152/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [153/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [154/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 86.7 us (25 GB/s)
+  gemm 2048x2048 [155/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [156/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [157/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 49.4 us (44 GB/s)
+  gemm 2048x2048 [158/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [159/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [160/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 41.9 us (52 GB/s)
+  gemm 2048x2048 [161/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [162/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [163/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 42.5 us (51 GB/s)
+  gemm 2048x2048 [164/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [165/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [166/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 42.0 us (52 GB/s)
+  gemm 2048x2048 [167/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [168/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [169/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 35.7 us (61 GB/s)
+  gemm 2048x2048 [170/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [171/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [172/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 35.1 us (62 GB/s)
+  gemm 2048x2048 [173/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [174/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [175/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 38.5 us (57 GB/s)
+  gemm 2048x2048 [176/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [177/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [178/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 37.9 us (57 GB/s)
+  gemm 2048x2048 [179/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x2048 [180/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+== awq_gemm K=2048 N=11008
+  gemm 2048x11008 [0/180] DEFAULT BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 -> 78.0 us (150 GB/s)
+  gemm 2048x11008 [1/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 82.3 us (142 GB/s)
+  gemm 2048x11008 [2/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 71.1 us (165 GB/s)
+  gemm 2048x11008 [3/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 74.1 us (158 GB/s)
+  gemm 2048x11008 [4/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 84.7 us (138 GB/s)
+  gemm 2048x11008 [5/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 77.3 us (152 GB/s)
+  gemm 2048x11008 [6/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 78.2 us (150 GB/s)
+  gemm 2048x11008 [7/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 67.3 us (174 GB/s)
+  gemm 2048x11008 [8/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 82.0 us (143 GB/s)
+  gemm 2048x11008 [9/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 91.4 us (128 GB/s)
+  gemm 2048x11008 [10/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 121.6 us (96 GB/s)
+  gemm 2048x11008 [11/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 108.9 us (108 GB/s)
+  gemm 2048x11008 [12/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 118.8 us (99 GB/s)
+  gemm 2048x11008 [13/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 88.4 us (133 GB/s)
+  gemm 2048x11008 [14/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 98.1 us (119 GB/s)
+  gemm 2048x11008 [15/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 107.8 us (109 GB/s)
+  gemm 2048x11008 [16/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 134.1 us (87 GB/s)
+  gemm 2048x11008 [17/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 124.9 us (94 GB/s)
+  gemm 2048x11008 [18/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 129.6 us (90 GB/s)
+  gemm 2048x11008 [19/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 98.1 us (119 GB/s)
+  gemm 2048x11008 [20/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 106.9 us (110 GB/s)
+  gemm 2048x11008 [21/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 127.2 us (92 GB/s)
+  gemm 2048x11008 [22/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 153.3 us (76 GB/s)
+  gemm 2048x11008 [23/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 152.1 us (77 GB/s)
+  gemm 2048x11008 [24/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 173.7 us (67 GB/s)
+  gemm 2048x11008 [25/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 120.1 us (97 GB/s)
+  gemm 2048x11008 [26/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 135.2 us (87 GB/s)
+  gemm 2048x11008 [27/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 160.1 us (73 GB/s)
+  gemm 2048x11008 [28/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 195.5 us (60 GB/s)
+  gemm 2048x11008 [29/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 200.9 us (58 GB/s)
+  gemm 2048x11008 [30/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 216.8 us (54 GB/s)
+  gemm 2048x11008 [31/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 130.1 us (90 GB/s)
+  gemm 2048x11008 [32/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> 149.3 us (78 GB/s)
+  gemm 2048x11008 [33/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> 179.7 us (65 GB/s)
+  gemm 2048x11008 [34/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 198.9 us (59 GB/s)
+  gemm 2048x11008 [35/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> 176.8 us (66 GB/s)
+  gemm 2048x11008 [36/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> 182.3 us (64 GB/s)
+  gemm 2048x11008 [37/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 138.5 us (85 GB/s)
+  gemm 2048x11008 [38/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> 158.7 us (74 GB/s)
+  gemm 2048x11008 [39/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> 199.8 us (59 GB/s)
+  gemm 2048x11008 [40/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 214.5 us (55 GB/s)
+  gemm 2048x11008 [41/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> 190.9 us (61 GB/s)
+  gemm 2048x11008 [42/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> 220.2 us (53 GB/s)
+  gemm 2048x11008 [43/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 151.0 us (78 GB/s)
+  gemm 2048x11008 [44/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> 173.6 us (67 GB/s)
+  gemm 2048x11008 [45/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> 219.3 us (53 GB/s)
+  gemm 2048x11008 [46/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 226.8 us (52 GB/s)
+  gemm 2048x11008 [47/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> 213.1 us (55 GB/s)
+  gemm 2048x11008 [48/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> 223.1 us (53 GB/s)
+  gemm 2048x11008 [49/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 164.3 us (71 GB/s)
+  gemm 2048x11008 [50/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> 193.8 us (60 GB/s)
+  gemm 2048x11008 [51/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> 262.7 us (45 GB/s)
+  gemm 2048x11008 [52/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 249.3 us (47 GB/s)
+  gemm 2048x11008 [53/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> 244.5 us (48 GB/s)
+  gemm 2048x11008 [54/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> 261.9 us (45 GB/s)
+  gemm 2048x11008 [55/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 178.0 us (66 GB/s)
+  gemm 2048x11008 [56/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> 212.5 us (55 GB/s)
+  gemm 2048x11008 [57/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> 291.5 us (40 GB/s)
+  gemm 2048x11008 [58/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 274.7 us (43 GB/s)
+  gemm 2048x11008 [59/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> 296.7 us (39 GB/s)
+  gemm 2048x11008 [60/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> 253.3 us (46 GB/s)
+  gemm 2048x11008 [61/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 203.2 us (58 GB/s)
+  gemm 2048x11008 [62/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 224.4 us (52 GB/s)
+  gemm 2048x11008 [63/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 229.8 us (51 GB/s)
+  gemm 2048x11008 [64/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 155.6 us (75 GB/s)
+  gemm 2048x11008 [65/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 135.1 us (87 GB/s)
+  gemm 2048x11008 [66/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 135.1 us (87 GB/s)
+  gemm 2048x11008 [67/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 195.6 us (60 GB/s)
+  gemm 2048x11008 [68/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 204.9 us (57 GB/s)
+  gemm 2048x11008 [69/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 239.8 us (49 GB/s)
+  gemm 2048x11008 [70/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 126.0 us (93 GB/s)
+  gemm 2048x11008 [71/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 123.9 us (95 GB/s)
+  gemm 2048x11008 [72/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 126.1 us (93 GB/s)
+  gemm 2048x11008 [73/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 184.7 us (63 GB/s)
+  gemm 2048x11008 [74/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 194.3 us (60 GB/s)
+  gemm 2048x11008 [75/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 229.6 us (51 GB/s)
+  gemm 2048x11008 [76/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 119.8 us (98 GB/s)
+  gemm 2048x11008 [77/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 143.5 us (82 GB/s)
+  gemm 2048x11008 [78/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 146.6 us (80 GB/s)
+  gemm 2048x11008 [79/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 214.1 us (55 GB/s)
+  gemm 2048x11008 [80/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 226.6 us (52 GB/s)
+  gemm 2048x11008 [81/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 274.3 us (43 GB/s)
+  gemm 2048x11008 [82/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 143.3 us (82 GB/s)
+  gemm 2048x11008 [83/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 163.7 us (72 GB/s)
+  gemm 2048x11008 [84/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 168.7 us (69 GB/s)
+  gemm 2048x11008 [85/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 227.8 us (51 GB/s)
+  gemm 2048x11008 [86/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 260.8 us (45 GB/s)
+  gemm 2048x11008 [87/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 318.1 us (37 GB/s)
+  gemm 2048x11008 [88/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 139.2 us (84 GB/s)
+  gemm 2048x11008 [89/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 159.3 us (74 GB/s)
+  gemm 2048x11008 [90/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 166.6 us (70 GB/s)
+  gemm 2048x11008 [91/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 223.4 us (52 GB/s)
+  gemm 2048x11008 [92/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> 334.8 us (35 GB/s)
+  gemm 2048x11008 [93/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> 333.1 us (35 GB/s)
+  gemm 2048x11008 [94/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 128.6 us (91 GB/s)
+  gemm 2048x11008 [95/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> 194.4 us (60 GB/s)
+  gemm 2048x11008 [96/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> 197.7 us (59 GB/s)
+  gemm 2048x11008 [97/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 232.4 us (50 GB/s)
+  gemm 2048x11008 [98/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> 336.4 us (35 GB/s)
+  gemm 2048x11008 [99/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> 283.8 us (41 GB/s)
+  gemm 2048x11008 [100/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 181.1 us (65 GB/s)
+  gemm 2048x11008 [101/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> 172.1 us (68 GB/s)
+  gemm 2048x11008 [102/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> 171.6 us (68 GB/s)
+  gemm 2048x11008 [103/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 189.7 us (62 GB/s)
+  gemm 2048x11008 [104/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> 278.0 us (42 GB/s)
+  gemm 2048x11008 [105/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> 280.7 us (42 GB/s)
+  gemm 2048x11008 [106/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 155.3 us (75 GB/s)
+  gemm 2048x11008 [107/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> 151.4 us (77 GB/s)
+  gemm 2048x11008 [108/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> 151.6 us (77 GB/s)
+  gemm 2048x11008 [109/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 162.3 us (72 GB/s)
+  gemm 2048x11008 [110/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> 249.5 us (47 GB/s)
+  gemm 2048x11008 [111/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> 249.2 us (47 GB/s)
+  gemm 2048x11008 [112/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 162.8 us (72 GB/s)
+  gemm 2048x11008 [113/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> 163.0 us (72 GB/s)
+  gemm 2048x11008 [114/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> 164.2 us (71 GB/s)
+  gemm 2048x11008 [115/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 170.3 us (69 GB/s)
+  gemm 2048x11008 [116/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> 273.3 us (43 GB/s)
+  gemm 2048x11008 [117/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> 275.0 us (43 GB/s)
+  gemm 2048x11008 [118/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 187.1 us (63 GB/s)
+  gemm 2048x11008 [119/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> 181.2 us (65 GB/s)
+  gemm 2048x11008 [120/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> 184.0 us (64 GB/s)
+  gemm 2048x11008 [121/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 124.6 us (94 GB/s)
+  gemm 2048x11008 [122/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 178.0 us (66 GB/s)
+  gemm 2048x11008 [123/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 188.3 us (62 GB/s)
+  gemm 2048x11008 [124/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 170.2 us (69 GB/s)
+  gemm 2048x11008 [125/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 211.9 us (55 GB/s)
+  gemm 2048x11008 [126/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 213.0 us (55 GB/s)
+  gemm 2048x11008 [127/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 136.4 us (86 GB/s)
+  gemm 2048x11008 [128/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 210.8 us (56 GB/s)
+  gemm 2048x11008 [129/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 217.4 us (54 GB/s)
+  gemm 2048x11008 [130/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 179.3 us (65 GB/s)
+  gemm 2048x11008 [131/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 242.4 us (48 GB/s)
+  gemm 2048x11008 [132/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 248.4 us (47 GB/s)
+  gemm 2048x11008 [133/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 143.7 us (82 GB/s)
+  gemm 2048x11008 [134/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 241.2 us (49 GB/s)
+  gemm 2048x11008 [135/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 231.4 us (51 GB/s)
+  gemm 2048x11008 [136/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 181.1 us (65 GB/s)
+  gemm 2048x11008 [137/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 242.7 us (48 GB/s)
+  gemm 2048x11008 [138/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 251.0 us (47 GB/s)
+  gemm 2048x11008 [139/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 142.1 us (82 GB/s)
+  gemm 2048x11008 [140/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 216.5 us (54 GB/s)
+  gemm 2048x11008 [141/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 222.4 us (53 GB/s)
+  gemm 2048x11008 [142/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 176.0 us (67 GB/s)
+  gemm 2048x11008 [143/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 255.0 us (46 GB/s)
+  gemm 2048x11008 [144/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 243.0 us (48 GB/s)
+  gemm 2048x11008 [145/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 138.7 us (84 GB/s)
+  gemm 2048x11008 [146/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 213.5 us (55 GB/s)
+  gemm 2048x11008 [147/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 215.1 us (54 GB/s)
+  gemm 2048x11008 [148/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 176.6 us (66 GB/s)
+  gemm 2048x11008 [149/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 235.2 us (50 GB/s)
+  gemm 2048x11008 [150/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 239.9 us (49 GB/s)
+  gemm 2048x11008 [151/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 228.4 us (51 GB/s)
+  gemm 2048x11008 [152/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [153/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [154/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 226.6 us (52 GB/s)
+  gemm 2048x11008 [155/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [156/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [157/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 224.8 us (52 GB/s)
+  gemm 2048x11008 [158/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [159/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [160/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 226.1 us (52 GB/s)
+  gemm 2048x11008 [161/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [162/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [163/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 226.1 us (52 GB/s)
+  gemm 2048x11008 [164/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [165/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [166/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 229.3 us (51 GB/s)
+  gemm 2048x11008 [167/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [168/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [169/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 227.6 us (51 GB/s)
+  gemm 2048x11008 [170/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [171/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [172/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 226.6 us (52 GB/s)
+  gemm 2048x11008 [173/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [174/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [175/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 245.2 us (48 GB/s)
+  gemm 2048x11008 [176/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [177/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [178/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 240.2 us (49 GB/s)
+  gemm 2048x11008 [179/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 2048x11008 [180/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+== awq_gemm K=11008 N=2048
+  gemm 11008x2048 [0/180] DEFAULT BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 -> 101.2 us (116 GB/s)
+  gemm 11008x2048 [1/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 220.6 us (53 GB/s)
+  gemm 11008x2048 [2/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 171.2 us (68 GB/s)
+  gemm 11008x2048 [3/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 172.8 us (68 GB/s)
+  gemm 11008x2048 [4/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 205.1 us (57 GB/s)
+  gemm 11008x2048 [5/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 174.8 us (67 GB/s)
+  gemm 11008x2048 [6/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 175.0 us (67 GB/s)
+  gemm 11008x2048 [7/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 136.4 us (86 GB/s)
+  gemm 11008x2048 [8/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 108.6 us (108 GB/s)
+  gemm 11008x2048 [9/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 108.1 us (108 GB/s)
+  gemm 11008x2048 [10/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 143.7 us (82 GB/s)
+  gemm 11008x2048 [11/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 115.5 us (101 GB/s)
+  gemm 11008x2048 [12/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 115.6 us (101 GB/s)
+  gemm 11008x2048 [13/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 83.3 us (141 GB/s)
+  gemm 11008x2048 [14/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 102.6 us (114 GB/s)
+  gemm 11008x2048 [15/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 104.8 us (112 GB/s)
+  gemm 11008x2048 [16/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 180.3 us (65 GB/s)
+  gemm 11008x2048 [17/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 146.2 us (80 GB/s)
+  gemm 11008x2048 [18/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 157.1 us (75 GB/s)
+  gemm 11008x2048 [19/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 113.2 us (103 GB/s)
+  gemm 11008x2048 [20/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 124.7 us (94 GB/s)
+  gemm 11008x2048 [21/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 125.0 us (94 GB/s)
+  gemm 11008x2048 [22/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 167.2 us (70 GB/s)
+  gemm 11008x2048 [23/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 149.9 us (78 GB/s)
+  gemm 11008x2048 [24/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 155.7 us (75 GB/s)
+  gemm 11008x2048 [25/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 116.8 us (100 GB/s)
+  gemm 11008x2048 [26/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 122.8 us (95 GB/s)
+  gemm 11008x2048 [27/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 134.0 us (87 GB/s)
+  gemm 11008x2048 [28/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 185.5 us (63 GB/s)
+  gemm 11008x2048 [29/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 167.2 us (70 GB/s)
+  gemm 11008x2048 [30/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 175.0 us (67 GB/s)
+  gemm 11008x2048 [31/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 251.2 us (47 GB/s)
+  gemm 11008x2048 [32/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> 240.9 us (49 GB/s)
+  gemm 11008x2048 [33/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> 248.6 us (47 GB/s)
+  gemm 11008x2048 [34/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 266.7 us (44 GB/s)
+  gemm 11008x2048 [35/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> 248.9 us (47 GB/s)
+  gemm 11008x2048 [36/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> 241.8 us (48 GB/s)
+  gemm 11008x2048 [37/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 153.4 us (76 GB/s)
+  gemm 11008x2048 [38/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> 158.2 us (74 GB/s)
+  gemm 11008x2048 [39/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> 214.0 us (55 GB/s)
+  gemm 11008x2048 [40/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 238.9 us (49 GB/s)
+  gemm 11008x2048 [41/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> 194.1 us (60 GB/s)
+  gemm 11008x2048 [42/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> 193.6 us (61 GB/s)
+  gemm 11008x2048 [43/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 143.0 us (82 GB/s)
+  gemm 11008x2048 [44/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> 152.9 us (77 GB/s)
+  gemm 11008x2048 [45/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> 185.3 us (63 GB/s)
+  gemm 11008x2048 [46/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 205.4 us (57 GB/s)
+  gemm 11008x2048 [47/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> 171.5 us (68 GB/s)
+  gemm 11008x2048 [48/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> 173.5 us (67 GB/s)
+  gemm 11008x2048 [49/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 129.5 us (90 GB/s)
+  gemm 11008x2048 [50/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> 141.4 us (83 GB/s)
+  gemm 11008x2048 [51/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> 177.3 us (66 GB/s)
+  gemm 11008x2048 [52/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 190.2 us (62 GB/s)
+  gemm 11008x2048 [53/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> 168.0 us (70 GB/s)
+  gemm 11008x2048 [54/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> 197.5 us (59 GB/s)
+  gemm 11008x2048 [55/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 157.1 us (75 GB/s)
+  gemm 11008x2048 [56/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> 172.1 us (68 GB/s)
+  gemm 11008x2048 [57/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> 212.0 us (55 GB/s)
+  gemm 11008x2048 [58/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 222.7 us (53 GB/s)
+  gemm 11008x2048 [59/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> 211.8 us (55 GB/s)
+  gemm 11008x2048 [60/180]  BLOCK_M=16 BLOCK_N=64 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> 225.7 us (52 GB/s)
+  gemm 11008x2048 [61/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 733.6 us (16 GB/s)
+  gemm 11008x2048 [62/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 418.4 us (28 GB/s)
+  gemm 11008x2048 [63/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 405.1 us (29 GB/s)
+  gemm 11008x2048 [64/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 230.1 us (51 GB/s)
+  gemm 11008x2048 [65/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 166.4 us (70 GB/s)
+  gemm 11008x2048 [66/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 159.6 us (73 GB/s)
+  gemm 11008x2048 [67/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 185.8 us (63 GB/s)
+  gemm 11008x2048 [68/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 179.0 us (65 GB/s)
+  gemm 11008x2048 [69/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 178.2 us (66 GB/s)
+  gemm 11008x2048 [70/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 128.4 us (91 GB/s)
+  gemm 11008x2048 [71/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 95.5 us (123 GB/s)
+  gemm 11008x2048 [72/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 96.1 us (122 GB/s)
+  gemm 11008x2048 [73/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 121.9 us (96 GB/s)
+  gemm 11008x2048 [74/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 124.0 us (94 GB/s)
+  gemm 11008x2048 [75/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 160.1 us (73 GB/s)
+  gemm 11008x2048 [76/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 77.9 us (150 GB/s)
+  gemm 11008x2048 [77/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 93.2 us (126 GB/s)
+  gemm 11008x2048 [78/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 92.4 us (127 GB/s)
+  gemm 11008x2048 [79/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 117.2 us (100 GB/s)
+  gemm 11008x2048 [80/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 118.9 us (98 GB/s)
+  gemm 11008x2048 [81/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 137.7 us (85 GB/s)
+  gemm 11008x2048 [82/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 99.7 us (118 GB/s)
+  gemm 11008x2048 [83/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 101.9 us (115 GB/s)
+  gemm 11008x2048 [84/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 116.8 us (100 GB/s)
+  gemm 11008x2048 [85/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 154.1 us (76 GB/s)
+  gemm 11008x2048 [86/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 169.0 us (69 GB/s)
+  gemm 11008x2048 [87/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 198.8 us (59 GB/s)
+  gemm 11008x2048 [88/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 110.6 us (106 GB/s)
+  gemm 11008x2048 [89/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 113.5 us (103 GB/s)
+  gemm 11008x2048 [90/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 119.3 us (98 GB/s)
+  gemm 11008x2048 [91/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 424.2 us (28 GB/s)
+  gemm 11008x2048 [92/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> 328.4 us (36 GB/s)
+  gemm 11008x2048 [93/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> 340.3 us (34 GB/s)
+  gemm 11008x2048 [94/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 206.4 us (57 GB/s)
+  gemm 11008x2048 [95/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> 179.8 us (65 GB/s)
+  gemm 11008x2048 [96/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> 180.0 us (65 GB/s)
+  gemm 11008x2048 [97/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 212.5 us (55 GB/s)
+  gemm 11008x2048 [98/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> 308.8 us (38 GB/s)
+  gemm 11008x2048 [99/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> 285.5 us (41 GB/s)
+  gemm 11008x2048 [100/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 179.9 us (65 GB/s)
+  gemm 11008x2048 [101/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> 164.5 us (71 GB/s)
+  gemm 11008x2048 [102/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> 165.0 us (71 GB/s)
+  gemm 11008x2048 [103/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 172.7 us (68 GB/s)
+  gemm 11008x2048 [104/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> 224.5 us (52 GB/s)
+  gemm 11008x2048 [105/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> 222.8 us (53 GB/s)
+  gemm 11008x2048 [106/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 139.7 us (84 GB/s)
+  gemm 11008x2048 [107/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> 132.5 us (88 GB/s)
+  gemm 11008x2048 [108/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> 133.3 us (88 GB/s)
+  gemm 11008x2048 [109/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 146.4 us (80 GB/s)
+  gemm 11008x2048 [110/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> 222.3 us (53 GB/s)
+  gemm 11008x2048 [111/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> 219.6 us (53 GB/s)
+  gemm 11008x2048 [112/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 145.2 us (81 GB/s)
+  gemm 11008x2048 [113/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> 135.4 us (87 GB/s)
+  gemm 11008x2048 [114/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> 134.7 us (87 GB/s)
+  gemm 11008x2048 [115/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 145.1 us (81 GB/s)
+  gemm 11008x2048 [116/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> 231.4 us (51 GB/s)
+  gemm 11008x2048 [117/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> 231.0 us (51 GB/s)
+  gemm 11008x2048 [118/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 143.6 us (82 GB/s)
+  gemm 11008x2048 [119/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> 143.1 us (82 GB/s)
+  gemm 11008x2048 [120/180]  BLOCK_M=16 BLOCK_N=128 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> 151.0 us (78 GB/s)
+  gemm 11008x2048 [121/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=2 -> 517.1 us (23 GB/s)
+  gemm 11008x2048 [122/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=3 -> 439.5 us (27 GB/s)
+  gemm 11008x2048 [123/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=4 num_stages=4 -> 323.3 us (36 GB/s)
+  gemm 11008x2048 [124/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=2 -> 429.1 us (27 GB/s)
+  gemm 11008x2048 [125/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=3 -> 359.9 us (33 GB/s)
+  gemm 11008x2048 [126/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=1 num_warps=8 num_stages=4 -> 360.4 us (32 GB/s)
+  gemm 11008x2048 [127/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=2 -> 203.5 us (58 GB/s)
+  gemm 11008x2048 [128/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=3 -> 202.2 us (58 GB/s)
+  gemm 11008x2048 [129/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=4 num_stages=4 -> 206.3 us (57 GB/s)
+  gemm 11008x2048 [130/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=2 -> 237.4 us (49 GB/s)
+  gemm 11008x2048 [131/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=3 -> 216.4 us (54 GB/s)
+  gemm 11008x2048 [132/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=2 num_warps=8 num_stages=4 -> 218.1 us (54 GB/s)
+  gemm 11008x2048 [133/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=2 -> 114.4 us (102 GB/s)
+  gemm 11008x2048 [134/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=3 -> 195.3 us (60 GB/s)
+  gemm 11008x2048 [135/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=4 num_stages=4 -> 196.4 us (60 GB/s)
+  gemm 11008x2048 [136/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=2 -> 150.3 us (78 GB/s)
+  gemm 11008x2048 [137/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=3 -> 213.7 us (55 GB/s)
+  gemm 11008x2048 [138/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=4 num_warps=8 num_stages=4 -> 213.7 us (55 GB/s)
+  gemm 11008x2048 [139/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=2 -> 116.7 us (100 GB/s)
+  gemm 11008x2048 [140/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=3 -> 154.1 us (76 GB/s)
+  gemm 11008x2048 [141/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=4 num_stages=4 -> 153.2 us (76 GB/s)
+  gemm 11008x2048 [142/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=2 -> 150.2 us (78 GB/s)
+  gemm 11008x2048 [143/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=3 -> 190.8 us (61 GB/s)
+  gemm 11008x2048 [144/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=8 num_warps=8 num_stages=4 -> 194.9 us (60 GB/s)
+  gemm 11008x2048 [145/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=2 -> 108.0 us (108 GB/s)
+  gemm 11008x2048 [146/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=3 -> 175.9 us (67 GB/s)
+  gemm 11008x2048 [147/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=4 num_stages=4 -> 178.8 us (66 GB/s)
+  gemm 11008x2048 [148/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=2 -> 150.4 us (78 GB/s)
+  gemm 11008x2048 [149/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=3 -> 194.6 us (60 GB/s)
+  gemm 11008x2048 [150/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=64 SPLIT_K=16 num_warps=8 num_stages=4 -> 201.1 us (58 GB/s)
+  gemm 11008x2048 [151/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=2 -> 504.5 us (23 GB/s)
+  gemm 11008x2048 [152/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [153/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [154/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=2 -> 455.8 us (26 GB/s)
+  gemm 11008x2048 [155/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [156/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=1 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [157/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=2 -> 204.9 us (57 GB/s)
+  gemm 11008x2048 [158/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [159/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [160/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=2 -> 210.5 us (56 GB/s)
+  gemm 11008x2048 [161/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [162/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=2 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [163/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=2 -> 206.0 us (57 GB/s)
+  gemm 11008x2048 [164/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [165/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [166/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=2 -> 210.9 us (56 GB/s)
+  gemm 11008x2048 [167/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [168/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=4 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [169/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=2 -> 167.9 us (70 GB/s)
+  gemm 11008x2048 [170/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [171/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [172/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=2 -> 167.9 us (70 GB/s)
+  gemm 11008x2048 [173/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [174/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=8 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [175/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=2 -> 167.2 us (70 GB/s)
+  gemm 11008x2048 [176/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [177/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=4 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [178/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=2 -> 169.6 us (69 GB/s)
+  gemm 11008x2048 [179/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=3 -> skipped OutOfResources: out of resource: shared memory, Required: 106496, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  gemm 11008x2048 [180/180]  BLOCK_M=16 BLOCK_N=256 BLOCK_K=128 SPLIT_K=16 num_warps=8 num_stages=4 -> skipped OutOfResources: out of resource: shared memory, Required: 126976, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+== attention (Hq=16, Hkv=2, D=128) S=[128, 256, 512]
+  attention [0/108] DEFAULT {} -> 6.26 us mean over S=[128, 256, 512]
+  attention [1/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 2, 'num_splits': 1} -> 22.76 us mean over S=[128, 256, 512]
+  attention [2/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 2, 'num_splits': 2} -> 18.03 us mean over S=[128, 256, 512]
+  attention [3/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 2, 'num_splits': 4} -> 22.09 us mean over S=[128, 256, 512]
+  attention [4/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 2, 'num_splits': 8} -> 26.71 us mean over S=[128, 256, 512]
+  attention [5/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 3, 'num_splits': 1} -> 30.01 us mean over S=[128, 256, 512]
+  attention [6/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 3, 'num_splits': 2} -> 14.69 us mean over S=[128, 256, 512]
+  attention [7/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 3, 'num_splits': 4} -> 10.44 us mean over S=[128, 256, 512]
+  attention [8/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 3, 'num_splits': 8} -> 27.45 us mean over S=[128, 256, 512]
+  attention [9/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 4, 'num_splits': 1} -> 42.97 us mean over S=[128, 256, 512]
+  attention [10/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 4, 'num_splits': 2} -> 24.28 us mean over S=[128, 256, 512]
+  attention [11/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 4, 'num_splits': 4} -> 23.80 us mean over S=[128, 256, 512]
+  attention [12/108]  {'block_n': 32, 'num_warps': 2, 'num_stages': 4, 'num_splits': 8} -> 8.94 us mean over S=[128, 256, 512]
+  attention [13/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 2, 'num_splits': 1} -> 25.68 us mean over S=[128, 256, 512]
+  attention [14/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 2, 'num_splits': 2} -> 14.11 us mean over S=[128, 256, 512]
+  attention [15/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 2, 'num_splits': 4} -> 10.59 us mean over S=[128, 256, 512]
+  attention [16/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 2, 'num_splits': 8} -> 29.58 us mean over S=[128, 256, 512]
+  attention [17/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 3, 'num_splits': 1} -> 21.42 us mean over S=[128, 256, 512]
+  attention [18/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 3, 'num_splits': 2} -> 14.94 us mean over S=[128, 256, 512]
+  attention [19/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 3, 'num_splits': 4} -> 26.67 us mean over S=[128, 256, 512]
+  attention [20/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 3, 'num_splits': 8} -> 28.57 us mean over S=[128, 256, 512]
+  attention [21/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 4, 'num_splits': 1} -> 46.74 us mean over S=[128, 256, 512]
+  attention [22/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 4, 'num_splits': 2} -> 24.70 us mean over S=[128, 256, 512]
+  attention [23/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 4, 'num_splits': 4} -> 24.56 us mean over S=[128, 256, 512]
+  attention [24/108]  {'block_n': 32, 'num_warps': 4, 'num_stages': 4, 'num_splits': 8} -> 26.67 us mean over S=[128, 256, 512]
+  attention [25/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 2, 'num_splits': 1} -> 53.60 us mean over S=[128, 256, 512]
+  attention [26/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 2, 'num_splits': 2} -> 28.96 us mean over S=[128, 256, 512]
+  attention [27/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 2, 'num_splits': 4} -> 9.64 us mean over S=[128, 256, 512]
+  attention [28/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 2, 'num_splits': 8} -> 7.96 us mean over S=[128, 256, 512]
+  attention [29/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 3, 'num_splits': 1} -> 23.81 us mean over S=[128, 256, 512]
+  attention [30/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 3, 'num_splits': 2} -> 19.22 us mean over S=[128, 256, 512]
+  attention [31/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 3, 'num_splits': 4} -> 14.29 us mean over S=[128, 256, 512]
+  attention [32/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 3, 'num_splits': 8} -> 20.33 us mean over S=[128, 256, 512]
+  attention [33/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 4, 'num_splits': 1} -> 33.28 us mean over S=[128, 256, 512]
+  attention [34/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 4, 'num_splits': 2} -> 27.48 us mean over S=[128, 256, 512]
+  attention [35/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 4, 'num_splits': 4} -> 25.79 us mean over S=[128, 256, 512]
+  attention [36/108]  {'block_n': 32, 'num_warps': 8, 'num_stages': 4, 'num_splits': 8} -> 8.71 us mean over S=[128, 256, 512]
+  attention [37/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 2, 'num_splits': 1} -> 20.30 us mean over S=[128, 256, 512]
+  attention [38/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 2, 'num_splits': 2} -> 30.34 us mean over S=[128, 256, 512]
+  attention [39/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 2, 'num_splits': 4} -> 25.89 us mean over S=[128, 256, 512]
+  attention [40/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 2, 'num_splits': 8} -> 9.29 us mean over S=[128, 256, 512]
+  attention [41/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 3, 'num_splits': 1} -> 17.81 us mean over S=[128, 256, 512]
+  attention [42/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 3, 'num_splits': 2} -> 26.52 us mean over S=[128, 256, 512]
+  attention [43/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 3, 'num_splits': 4} -> 23.90 us mean over S=[128, 256, 512]
+  attention [44/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 3, 'num_splits': 8} -> 10.67 us mean over S=[128, 256, 512]
+  attention [45/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 4, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [46/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 4, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [47/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 4, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [48/108]  {'block_n': 64, 'num_warps': 2, 'num_stages': 4, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [49/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 2, 'num_splits': 1} -> 69.07 us mean over S=[128, 256, 512]
+  attention [50/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 2, 'num_splits': 2} -> 29.04 us mean over S=[128, 256, 512]
+  attention [51/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 2, 'num_splits': 4} -> 25.83 us mean over S=[128, 256, 512]
+  attention [52/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 2, 'num_splits': 8} -> 27.35 us mean over S=[128, 256, 512]
+  attention [53/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 3, 'num_splits': 1} -> 23.28 us mean over S=[128, 256, 512]
+  attention [54/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 3, 'num_splits': 2} -> 24.57 us mean over S=[128, 256, 512]
+  attention [55/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 3, 'num_splits': 4} -> 23.34 us mean over S=[128, 256, 512]
+  attention [56/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 3, 'num_splits': 8} -> 24.07 us mean over S=[128, 256, 512]
+  attention [57/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 4, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [58/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 4, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [59/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 4, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [60/108]  {'block_n': 64, 'num_warps': 4, 'num_stages': 4, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [61/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 2, 'num_splits': 1} -> 10.78 us mean over S=[128, 256, 512]
+  attention [62/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 2, 'num_splits': 2} -> 28.00 us mean over S=[128, 256, 512]
+  attention [63/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 2, 'num_splits': 4} -> 10.70 us mean over S=[128, 256, 512]
+  attention [64/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 2, 'num_splits': 8} -> 9.89 us mean over S=[128, 256, 512]
+  attention [65/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 3, 'num_splits': 1} -> 28.04 us mean over S=[128, 256, 512]
+  attention [66/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 3, 'num_splits': 2} -> 18.27 us mean over S=[128, 256, 512]
+  attention [67/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 3, 'num_splits': 4} -> 27.32 us mean over S=[128, 256, 512]
+  attention [68/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 3, 'num_splits': 8} -> 30.03 us mean over S=[128, 256, 512]
+  attention [69/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 4, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [70/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 4, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [71/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 4, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [72/108]  {'block_n': 64, 'num_warps': 8, 'num_stages': 4, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 104448, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [73/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 2, 'num_splits': 1} -> 54.84 us mean over S=[128, 256, 512]
+  attention [74/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 2, 'num_splits': 2} -> 8.97 us mean over S=[128, 256, 512]
+  attention [75/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 2, 'num_splits': 4} -> 35.20 us mean over S=[128, 256, 512]
+  attention [76/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 2, 'num_splits': 8} -> 33.90 us mean over S=[128, 256, 512]
+  attention [77/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 3, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [78/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 3, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [79/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 3, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [80/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 3, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [81/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 4, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [82/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 4, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [83/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 4, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [84/108]  {'block_n': 128, 'num_warps': 2, 'num_stages': 4, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [85/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 2, 'num_splits': 1} -> 51.46 us mean over S=[128, 256, 512]
+  attention [86/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 2, 'num_splits': 2} -> 26.91 us mean over S=[128, 256, 512]
+  attention [87/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 2, 'num_splits': 4} -> 26.21 us mean over S=[128, 256, 512]
+  attention [88/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 2, 'num_splits': 8} -> 27.66 us mean over S=[128, 256, 512]
+  attention [89/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 3, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [90/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 3, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [91/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 3, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [92/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 3, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [93/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 4, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [94/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 4, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [95/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 4, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [96/108]  {'block_n': 128, 'num_warps': 4, 'num_stages': 4, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [97/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 2, 'num_splits': 1} -> 80.96 us mean over S=[128, 256, 512]
+  attention [98/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 2, 'num_splits': 2} -> 28.07 us mean over S=[128, 256, 512]
+  attention [99/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 2, 'num_splits': 4} -> 29.89 us mean over S=[128, 256, 512]
+  attention [100/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 2, 'num_splits': 8} -> 25.80 us mean over S=[128, 256, 512]
+  attention [101/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 3, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [102/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 3, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [103/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 3, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [104/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 3, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 139264, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [105/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 4, 'num_splits': 1} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [106/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 4, 'num_splits': 2} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [107/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 4, 'num_splits': 4} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+  attention [108/108]  {'block_n': 128, 'num_warps': 8, 'num_stages': 4, 'num_splits': 8} -> skipped OutOfResources: out of resource: shared memory, Required: 204800, Hardware limit: 101376. Reducing block sizes or `num_stages` may help.
+
+== summary (microseconds per call; GB/s = packed weight bytes / time)
+       shape  default us  default GB/s  chosen us  chosen GB/s  speedup  pick
+ 2048x256            6.6          41.3        5.8         46.6    1.13x  tuned
+ 2048x2048          23.0          94.8       20.8        104.9    1.11x  tuned
+ 2048x11008         78.0         150.2       67.3        174.0    1.16x  tuned
+11008x2048         101.2         115.8       77.9        150.4    1.30x  tuned
+   attention        6.26                     6.26                 1.00x  default (defaults)
+
+wrote /home/rudra6155/LLM-inference-engine/results/run_c/tuning/best_configs.json (+ sweeps) in 336 s

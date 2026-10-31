@@ -1,0 +1,1 @@
+{"backend": "llama.cpp", "decode_tok_s": 93.06017237705639, "ttft_ms_p50": 34.94295849986884, "itl_ms_p99": 27.21801746949495, "peak_vram_mib": 2570.6171875}

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+.pytest_cache/
+.venvs/
+.triton/
+# downloaded model files (large)
+models/
+# JIT-built C++ extension artifacts live in torch's cache dir, not here
+# Chrome traces from torch.profiler are tens of MB; commit summaries, not traces
+results/**/traces/
+results/traces/

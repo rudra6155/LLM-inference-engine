@@ -1,0 +1,7 @@
+preflight	0	5s
+install	0	5s
+tests	0	25s
+roofline	0	4s
+tune	0	338s
+benchmark	0	374s
+profile	0	37s

@@ -1,0 +1,246 @@
+################ SUMMARY  2026-10-30T14:21:33Z ################
+
+== steps: name <TAB> exit code <TAB> seconds ==
+preflight	0	1s
+apt_prereqs	0	30s
+get_repo	0	1s
+setup_env	0	475s
+gpu_check	0	3s
+autoawq_probe	0	195s
+make_test	0	19s
+kernel_max_diff	0	5s
+cpp_op_bench	0	45s
+roofline	0	5s
+bench_engine	0	1198s
+profile	0	50s
+install_llamacpp	1	192s
+install_vllm	2	0s
+bench_baselines	0	0s
+
+== flags ==
+GPU_OK=1 REAL_CKPT_OK=0 LLAMA_OK=0 VLLM_OK=0 LOADER=autoawq ENGINE_LOADER=
+
+== git ==
+f32ad8db0cae8ef1fb0d638c9b4cbb6ef577d0ad
+ M results/cpp_op_bench.csv
+ M results/kernel_max_diff.csv
+ M results/roofline.png
+?? results/benchmark.csv
+?? results/benchmark_skips.log
+?? results/hw_ceilings.json
+?? results/logs/
+?? results/profile_custom_kernels.csv
+?? results/profile_reference_kernels.csv
+?? results/profile_skips.log
+?? results/prompt.json
+?? results/roofline_measured.json
+?? results/throughput.png
+?? results/traces/
+
+== environment ==
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+6.18.33.2-microsoft-standard-WSL2
+Python 3.10.12
+accelerate==1.15.0
+autoawq==0.2.9
+datasets==5.0.1
+ninja==1.13.2
+numpy==2.2.6
+nvidia-ml-py==13.615.71
+pytest==9.2.0
+safetensors==0.8.0
+tokenizers==0.21.4
+torch==2.6.0
+transformers==4.51.3
+triton==3.2.0
+name, driver_version, memory.total [MiB], power.limit [W], clocks.max.sm [MHz], clocks.max.memory [MHz]
+NVIDIA GeForce RTX 4060 Laptop GPU, 616.92, 8188 MiB, [N/A], 3105 MHz, 8001 MHz
+
+== autoawq probe ==
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Replacing layers...:   0%|          | 0/36 [00:00<?, ?it/s]Replacing layers...:   3%|▎         | 1/36 [00:00<00:05,  6.83it/s]Replacing layers...:   6%|▌         | 2/36 [00:00<00:04,  6.94it/s]Replacing layers...:   8%|▊         | 3/36 [00:00<00:04,  6.90it/s]Replacing layers...:  11%|█         | 4/36 [00:00<00:04,  6.95it/s]Replacing layers...:  14%|█▍        | 5/36 [00:00<00:04,  6.99it/s]Replacing layers...:  17%|█▋        | 6/36 [00:00<00:04,  6.98it/s]Replacing layers...:  19%|█▉        | 7/36 [00:01<00:04,  6.90it/s]Replacing layers...:  22%|██▏       | 8/36 [00:01<00:04,  6.55it/s]Replacing layers...:  25%|██▌       | 9/36 [00:01<00:04,  6.63it/s]Replacing layers...:  28%|██▊       | 10/36 [00:01<00:03,  6.73it/s]Replacing layers...:  31%|███       | 11/36 [00:01<00:03,  6.82it/s]Replacing layers...:  33%|███▎      | 12/36 [00:01<00:03,  6.79it/s]Replacing layers...:  36%|███▌      | 13/36 [00:01<00:03,  6.85it/s]Replacing layers...:  39%|███▉      | 14/36 [00:02<00:03,  6.87it/s]Replacing layers...:  42%|████▏     | 15/36 [00:02<00:03,  6.87it/s]Replacing layers...:  47%|████▋     | 17/36 [00:02<00:02,  7.94it/s]Replacing layers...:  50%|█████     | 18/36 [00:02<00:02,  7.67it/s]Replacing layers...:  53%|█████▎    | 19/36 [00:02<00:02,  7.50it/s]Replacing layers...:  56%|█████▌    | 20/36 [00:02<00:02,  7.34it/s]Replacing layers...:  58%|█████▊    | 21/36 [00:02<00:02,  7.24it/s]Replacing layers...:  61%|██████    | 22/36 [00:03<00:01,  7.17it/s]Replacing layers...:  64%|██████▍   | 23/36 [00:03<00:01,  7.16it/s]Replacing layers...:  67%|██████▋   | 24/36 [00:03<00:01,  7.14it/s]Replacing layers...:  69%|██████▉   | 25/36 [00:03<00:01,  7.13it/s]Replacing layers...:  72%|███████▏  | 26/36 [00:03<00:01,  7.09it/s]Replacing layers...:  75%|███████▌  | 27/36 [00:03<00:01,  7.09it/s]Replacing layers...:  78%|███████▊  | 28/36 [00:03<00:01,  7.13it/s]Replacing layers...:  81%|████████  | 29/36 [00:04<00:00,  7.16it/s]Replacing layers...:  83%|████████▎ | 30/36 [00:04<00:00,  7.21it/s]Replacing layers...:  86%|████████▌ | 31/36 [00:04<00:00,  7.21it/s]Replacing layers...:  89%|████████▉ | 32/36 [00:04<00:00,  7.24it/s]Replacing layers...:  92%|█████████▏| 33/36 [00:04<00:00,  7.24it/s]Replacing layers...:  94%|█████████▍| 34/36 [00:04<00:00,  7.26it/s]Replacing layers...:  97%|█████████▋| 35/36 [00:04<00:00,  7.12it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  7.00it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  7.09it/s]
+AUTOAWQ_LOAD_OK in 193s; embeddings on cuda:0; GPU memory allocated 1.92 GiB
+
+== test result lines (make test) ==
+================ 100 passed, 3 deselected, 1 warning in 16.57s =================
+
+== results/benchmark.csv ==
+timestamp_utc,backend,model,quant,device,prompt_tokens,new_tokens,runs,warmup,decode_tok_s,ttft_ms_p50,itl_ms_p50,itl_ms_p99,itl_ms_max,peak_vram_mib,vram_baseline_mib,vram_method,notes
+2026-10-30T13:59:49+00:00,engine,Qwen/Qwen2.5-3B-Instruct-AWQ,AWQ int4 g128,NVIDIA GeForce RTX 4060 Laptop GPU,128,128,10,2,12.9919,132.6429,74.3591,108.5912,168.0513,2899.4297,945.1914,nvml-device-level,loader=autoawq
+2026-10-30T14:17:29+00:00,engine-reference-ops,Qwen/Qwen2.5-3B-Instruct-AWQ,AWQ int4 g128,NVIDIA GeForce RTX 4060 Laptop GPU,128,128,10,2,1.4579,710.2548,681.7938,744.2199,803.5244,2856.8984,1005.7852,nvml-device-level,loader=autoawq
+
+== results/benchmark_skips.log ==
+2026-10-30T14:21:33Z SKIPPED llamacpp: no working CUDA build of llama-cpp-python could be installed (see run.log)
+2026-10-30T14:21:33Z SKIPPED vllm: vLLM 0.32.0 requires Python >= 3.11 (found Python 3.10.12); falling back to llama.cpp only
+
+== results/hw_ceilings.json ==
+{
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "bandwidth_GBs_copy": 229.10804801608245,
+  "peak_fp16_matmul_GFLOPs": 31035.512098709813,
+  "datasheet_bandwidth_GBs": 256.0
+}
+== results/roofline_measured.json ==
+[
+  {
+    "name": "q_proj",
+    "category": "4-bit GEMM",
+    "seconds": 0.0001478451156616211,
+    "ai": 3.8280373831775703,
+    "achieved_GFLOPs": 56.7391622135109,
+    "achieved_GBs": 14.82199794151774
+  },
+  {
+    "name": "gate_proj",
+    "category": "4-bit GEMM",
+    "seconds": 0.000107391357421875,
+    "ai": 3.841060758058185,
+    "achieved_GFLOPs": 419.8547171992043,
+    "achieved_GBs": 109.30697108042057
+  },
+  {
+    "name": "down_proj",
+    "category": "4-bit GEMM",
+    "seconds": 0.00020156095504760742,
+    "ai": 3.841060758058185,
+    "achieved_GFLOPs": 223.69792795112684,
+    "achieved_GBs": 58.23858096538296
+  },
+  {
+    "name": "attention (S=512)",
+    "category": "decode attention",
+    "seconds": 6.586112022399902e-05,
+    "ai": 7.876923076923077,
+    "achieved_GFLOPs": 63.68406710567375,
+    "achieved_GBs": 8.084891331774987
+  }
+]
+== results/kernel_max_diff.csv ==
+op,shape,mode,tolerance,max_abs_diff
+awq_gemm (fp32 out),M=1 K=2048 N=2048,compiled-cuda,atol 1e-3,2.956e-05
+awq_gemm (fp32 out),M=1 K=2048 N=256,compiled-cuda,atol 1e-3,1.144e-05
+awq_gemm (fp32 out),M=1 K=2048 N=11008,compiled-cuda,atol 1e-3,8.488e-05
+awq_gemm (fp32 out),M=1 K=11008 N=2048,compiled-cuda,atol 1e-3,2.174e-04
+awq_gemm (fp32 out),M=4 K=2048 N=2048,compiled-cuda,atol 1e-3,1.907e-05
+awq_gemm (fp32 out),M=17 K=2048 N=2048,compiled-cuda,atol 1e-3,2.289e-05
+fused_decode_attention,Hq=16 Hkv=2 D=128 S=1,compiled-cuda,atol 1e-3,0.000e+00
+fused_decode_attention,Hq=16 Hkv=2 D=128 S=64,compiled-cuda,atol 1e-3,5.187e-04
+fused_decode_attention,Hq=16 Hkv=2 D=128 S=200,compiled-cuda,atol 1e-3,5.050e-04
+fused_decode_attention,Hq=16 Hkv=2 D=128 S=512,compiled-cuda,atol 1e-3,4.808e-04
+cpp rmsnorm (float32),rows=1 hidden=2048,cpu-extension,atol 1e-4,0.000e+00
+cpp rmsnorm (float32),rows=8 hidden=2048,cpu-extension,atol 1e-4,9.537e-07
+cpp rmsnorm (float32),rows=128 hidden=2048,cpu-extension,atol 1e-4,1.907e-06
+cpp rmsnorm (float16),rows=1 hidden=2048,cpu-extension,fp16 rounding (1e-3 + 2e-3*|ref|),0.000e+00
+cpp rmsnorm (float16),rows=8 hidden=2048,cpu-extension,fp16 rounding (1e-3 + 2e-3*|ref|),0.000e+00
+cpp rmsnorm (float16),rows=128 hidden=2048,cpu-extension,fp16 rounding (1e-3 + 2e-3*|ref|),1.953e-03
+
+== results/cpp_op_bench.csv ==
+run,device,torch_threads,dtype,shape,pytorch_reference_us,cpp_op_us,speedup
+1,cpu: AMD Ryzen 7 7435HS,8,float32,1x2048,17.317,1.654,10.469
+1,cpu: AMD Ryzen 7 7435HS,8,float32,8x2048,23.300,4.244,5.490
+1,cpu: AMD Ryzen 7 7435HS,8,float32,128x2048,85.459,48.911,1.747
+1,cpu: AMD Ryzen 7 7435HS,8,float16,1x2048,20.885,1.806,11.567
+1,cpu: AMD Ryzen 7 7435HS,8,float16,8x2048,29.318,5.415,5.414
+1,cpu: AMD Ryzen 7 7435HS,8,float16,128x2048,82.465,69.050,1.194
+1,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,1x2048,88.746,73.745,1.203
+1,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,8x2048,90.453,71.230,1.270
+1,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,128x2048,94.304,74.647,1.263
+1,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,1x2048,171.057,135.052,1.267
+1,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,8x2048,165.817,135.819,1.221
+1,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,128x2048,169.049,121.118,1.396
+2,cpu: AMD Ryzen 7 7435HS,8,float32,1x2048,17.818,1.774,10.046
+2,cpu: AMD Ryzen 7 7435HS,8,float32,8x2048,24.168,4.246,5.692
+2,cpu: AMD Ryzen 7 7435HS,8,float32,128x2048,59.876,49.123,1.219
+2,cpu: AMD Ryzen 7 7435HS,8,float16,1x2048,21.346,1.838,11.611
+2,cpu: AMD Ryzen 7 7435HS,8,float16,8x2048,30.992,5.432,5.705
+2,cpu: AMD Ryzen 7 7435HS,8,float16,128x2048,82.536,67.599,1.221
+2,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,1x2048,102.652,80.201,1.280
+2,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,8x2048,91.951,80.998,1.135
+2,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,128x2048,90.855,73.868,1.230
+2,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,1x2048,128.327,98.736,1.300
+2,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,8x2048,123.202,99.500,1.238
+2,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,128x2048,123.636,101.878,1.214
+3,cpu: AMD Ryzen 7 7435HS,8,float32,1x2048,17.846,1.738,10.267
+3,cpu: AMD Ryzen 7 7435HS,8,float32,8x2048,23.904,4.167,5.737
+3,cpu: AMD Ryzen 7 7435HS,8,float32,128x2048,59.711,48.428,1.233
+3,cpu: AMD Ryzen 7 7435HS,8,float16,1x2048,21.027,1.843,11.408
+3,cpu: AMD Ryzen 7 7435HS,8,float16,8x2048,30.200,5.431,5.560
+3,cpu: AMD Ryzen 7 7435HS,8,float16,128x2048,77.924,70.066,1.112
+3,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,1x2048,109.556,82.927,1.321
+3,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,8x2048,93.612,74.594,1.255
+3,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,128x2048,93.455,72.115,1.296
+3,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,1x2048,119.344,96.437,1.238
+3,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,8x2048,122.378,97.569,1.254
+3,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,128x2048,127.320,98.833,1.288
+4,cpu: AMD Ryzen 7 7435HS,8,float32,1x2048,17.651,1.683,10.487
+4,cpu: AMD Ryzen 7 7435HS,8,float32,8x2048,22.931,4.178,5.488
+4,cpu: AMD Ryzen 7 7435HS,8,float32,128x2048,66.742,48.426,1.378
+4,cpu: AMD Ryzen 7 7435HS,8,float16,1x2048,20.230,1.834,11.030
+4,cpu: AMD Ryzen 7 7435HS,8,float16,8x2048,29.332,5.411,5.421
+4,cpu: AMD Ryzen 7 7435HS,8,float16,128x2048,94.285,69.083,1.365
+4,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,1x2048,106.680,77.917,1.369
+4,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,8x2048,88.674,76.146,1.165
+4,NVIDIA GeForce RTX 4060 Laptop GPU,,float32,128x2048,88.498,72.245,1.225
+4,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,1x2048,123.150,99.670,1.236
+4,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,8x2048,131.066,99.117,1.322
+4,NVIDIA GeForce RTX 4060 Laptop GPU,,float16,128x2048,121.196,113.118,1.071
+
+== results/profile_custom_summary.json ==
+(absent)
+
+== results/profile_reference_summary.json ==
+(absent)
+
+== results/profile_summary.csv ==
+(absent)
+
+== results/profile_skips.log ==
+torch.profiler run for custom failed
+torch.profiler run for reference failed
+ncu not found: DRAM-throughput counters were not collected
+report failed
+
+== tail of results/logs/engine.log ==
+- If future versions of Transformers break AutoAWQ compatibility, please report the issue to the Transformers project.
+
+Alternative:
+- AutoAWQ has been adopted by the vLLM Project: https://github.com/vllm-project/llm-compressor
+
+For further inquiries, feel free to reach out:
+- X: https://x.com/casper_hansen_
+- LinkedIn: https://www.linkedin.com/in/casper-hansen-804005170/
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Replacing layers...:   0%|          | 0/36 [00:00<?, ?it/s]Replacing layers...:   3%|▎         | 1/36 [00:00<00:04,  7.15it/s]Replacing layers...:   6%|▌         | 2/36 [00:00<00:05,  6.59it/s]Replacing layers...:   8%|▊         | 3/36 [00:00<00:04,  6.78it/s]Replacing layers...:  11%|█         | 4/36 [00:00<00:04,  6.88it/s]Replacing layers...:  14%|█▍        | 5/36 [00:00<00:04,  6.95it/s]Replacing layers...:  17%|█▋        | 6/36 [00:00<00:04,  7.02it/s]Replacing layers...:  19%|█▉        | 7/36 [00:01<00:04,  7.04it/s]Replacing layers...:  22%|██▏       | 8/36 [00:01<00:03,  7.07it/s]Replacing layers...:  25%|██▌       | 9/36 [00:01<00:03,  6.96it/s]Replacing layers...:  28%|██▊       | 10/36 [00:01<00:03,  6.98it/s]Replacing layers...:  31%|███       | 11/36 [00:01<00:03,  7.05it/s]Replacing layers...:  33%|███▎      | 12/36 [00:01<00:03,  7.07it/s]Replacing layers...:  36%|███▌      | 13/36 [00:01<00:03,  6.95it/s]Replacing layers...:  39%|███▉      | 14/36 [00:02<00:03,  7.00it/s]Replacing layers...:  42%|████▏     | 15/36 [00:02<00:02,  7.01it/s]Replacing layers...:  44%|████▍     | 16/36 [00:02<00:02,  7.04it/s]Replacing layers...:  47%|████▋     | 17/36 [00:02<00:02,  6.95it/s]Replacing layers...:  50%|█████     | 18/36 [00:02<00:02,  6.99it/s]Replacing layers...:  53%|█████▎    | 19/36 [00:02<00:02,  6.94it/s]Replacing layers...:  56%|█████▌    | 20/36 [00:02<00:02,  6.98it/s]Replacing layers...:  58%|█████▊    | 21/36 [00:03<00:02,  7.02it/s]Replacing layers...:  64%|██████▍   | 23/36 [00:03<00:01,  8.40it/s]Replacing layers...:  67%|██████▋   | 24/36 [00:03<00:01,  8.00it/s]Replacing layers...:  69%|██████▉   | 25/36 [00:03<00:01,  7.82it/s]Replacing layers...:  72%|███████▏  | 26/36 [00:03<00:01,  7.71it/s]Replacing layers...:  75%|███████▌  | 27/36 [00:03<00:01,  7.45it/s]Replacing layers...:  78%|███████▊  | 28/36 [00:03<00:01,  7.40it/s]Replacing layers...:  81%|████████  | 29/36 [00:04<00:00,  7.40it/s]Replacing layers...:  83%|████████▎ | 30/36 [00:04<00:00,  7.38it/s]Replacing layers...:  86%|████████▌ | 31/36 [00:04<00:00,  7.34it/s]Replacing layers...:  89%|████████▉ | 32/36 [00:04<00:00,  7.31it/s]Replacing layers...:  92%|█████████▏| 33/36 [00:04<00:00,  7.20it/s]Replacing layers...:  94%|█████████▍| 34/36 [00:04<00:00,  7.06it/s]Replacing layers...:  97%|█████████▋| 35/36 [00:04<00:00,  7.06it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  7.02it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  7.18it/s]
+/usr/lib/python3.10/distutils/command/build_ext.py:13: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+  from distutils.sysconfig import customize_compiler, get_python_version
+{"backend": "engine", "decode_tok_s": 12.991909465510231, "ttft_ms_p50": 132.6429149999626, "itl_ms_p99": 108.5912210999936, "peak_vram_mib": 2899.4296875}
+
+== tail of results/logs/engine-reference-ops.log ==
+- AutoAWQ is officially deprecated and will no longer be maintained.
+- The last tested configuration used Torch 2.6.0 and Transformers 4.51.3.
+- If future versions of Transformers break AutoAWQ compatibility, please report the issue to the Transformers project.
+
+Alternative:
+- AutoAWQ has been adopted by the vLLM Project: https://github.com/vllm-project/llm-compressor
+
+For further inquiries, feel free to reach out:
+- X: https://x.com/casper_hansen_
+- LinkedIn: https://www.linkedin.com/in/casper-hansen-804005170/
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Replacing layers...:   0%|          | 0/36 [00:00<?, ?it/s]Replacing layers...:   3%|▎         | 1/36 [00:00<00:05,  6.89it/s]Replacing layers...:   6%|▌         | 2/36 [00:00<00:04,  6.96it/s]Replacing layers...:   8%|▊         | 3/36 [00:00<00:04,  6.93it/s]Replacing layers...:  11%|█         | 4/36 [00:00<00:04,  6.89it/s]Replacing layers...:  14%|█▍        | 5/36 [00:00<00:04,  6.88it/s]Replacing layers...:  17%|█▋        | 6/36 [00:00<00:04,  6.91it/s]Replacing layers...:  19%|█▉        | 7/36 [00:01<00:04,  6.92it/s]Replacing layers...:  22%|██▏       | 8/36 [00:01<00:04,  6.86it/s]Replacing layers...:  25%|██▌       | 9/36 [00:01<00:03,  6.88it/s]Replacing layers...:  28%|██▊       | 10/36 [00:01<00:03,  6.89it/s]Replacing layers...:  31%|███       | 11/36 [00:01<00:03,  6.90it/s]Replacing layers...:  33%|███▎      | 12/36 [00:01<00:03,  6.93it/s]Replacing layers...:  36%|███▌      | 13/36 [00:01<00:03,  6.91it/s]Replacing layers...:  39%|███▉      | 14/36 [00:02<00:03,  6.93it/s]Replacing layers...:  42%|████▏     | 15/36 [00:02<00:03,  6.92it/s]Replacing layers...:  44%|████▍     | 16/36 [00:02<00:02,  6.88it/s]Replacing layers...:  47%|████▋     | 17/36 [00:02<00:02,  6.91it/s]Replacing layers...:  50%|█████     | 18/36 [00:02<00:02,  6.94it/s]Replacing layers...:  53%|█████▎    | 19/36 [00:02<00:02,  6.94it/s]Replacing layers...:  56%|█████▌    | 20/36 [00:02<00:02,  6.86it/s]Replacing layers...:  58%|█████▊    | 21/36 [00:03<00:02,  6.84it/s]Replacing layers...:  61%|██████    | 22/36 [00:03<00:02,  6.86it/s]Replacing layers...:  64%|██████▍   | 23/36 [00:03<00:01,  6.86it/s]Replacing layers...:  67%|██████▋   | 24/36 [00:03<00:01,  6.88it/s]Replacing layers...:  69%|██████▉   | 25/36 [00:03<00:01,  6.88it/s]Replacing layers...:  72%|███████▏  | 26/36 [00:03<00:01,  6.87it/s]Replacing layers...:  75%|███████▌  | 27/36 [00:03<00:01,  6.85it/s]Replacing layers...:  78%|███████▊  | 28/36 [00:04<00:01,  6.85it/s]Replacing layers...:  81%|████████  | 29/36 [00:04<00:01,  6.77it/s]Replacing layers...:  83%|████████▎ | 30/36 [00:04<00:00,  6.63it/s]Replacing layers...:  86%|████████▌ | 31/36 [00:04<00:00,  6.69it/s]Replacing layers...:  89%|████████▉ | 32/36 [00:04<00:00,  6.73it/s]Replacing layers...:  92%|█████████▏| 33/36 [00:04<00:00,  6.75it/s]Replacing layers...:  94%|█████████▍| 34/36 [00:04<00:00,  6.77it/s]Replacing layers...:  97%|█████████▋| 35/36 [00:05<00:00,  6.80it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  6.78it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  6.85it/s]
+{"backend": "engine-reference-ops", "decode_tok_s": 1.457874997452414, "ttft_ms_p50": 710.2547939999795, "itl_ms_p99": 744.2198584499168, "peak_vram_mib": 2856.8984375}
+
+== trace files ==
+total 100920
+drwxr-xr-x 2 rudra6155 rudra6155     4096 Oct 30 19:48 .
+drwxr-xr-x 4 rudra6155 rudra6155     4096 Oct 30 19:51 ..
+-rw-r--r-- 1 rudra6155 rudra6155 19999343 Oct 30 19:47 decode_custom.json
+-rw-r--r-- 1 rudra6155 rudra6155 83325963 Oct 30 19:48 decode_reference.json

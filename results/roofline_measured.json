@@ -1,0 +1,34 @@
+[
+  {
+    "name": "q_proj",
+    "category": "4-bit GEMM",
+    "seconds": 0.0001478451156616211,
+    "ai": 3.8280373831775703,
+    "achieved_GFLOPs": 56.7391622135109,
+    "achieved_GBs": 14.82199794151774
+  },
+  {
+    "name": "gate_proj",
+    "category": "4-bit GEMM",
+    "seconds": 0.000107391357421875,
+    "ai": 3.841060758058185,
+    "achieved_GFLOPs": 419.8547171992043,
+    "achieved_GBs": 109.30697108042057
+  },
+  {
+    "name": "down_proj",
+    "category": "4-bit GEMM",
+    "seconds": 0.00020156095504760742,
+    "ai": 3.841060758058185,
+    "achieved_GFLOPs": 223.69792795112684,
+    "achieved_GBs": 58.23858096538296
+  },
+  {
+    "name": "attention (S=512)",
+    "category": "decode attention",
+    "seconds": 6.586112022399902e-05,
+    "ai": 7.876923076923077,
+    "achieved_GFLOPs": 63.68406710567375,
+    "achieved_GBs": 8.084891331774987
+  }
+]

@@ -1,0 +1,22 @@
+{
+  "variant": "custom",
+  "steps": 10,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_busy_ms_per_step": null,
+  "wall_ms_per_step_under_profiler": 207.92602020010236,
+  "kernel_launches_per_step": null,
+  "useful_bytes_per_step": 2074483456.0,
+  "useful_bandwidth_GBs": null,
+  "measured_copy_bandwidth_GBs": 223.00171842310542,
+  "useful_bandwidth_pct_of_measured_copy_bw": null,
+  "eager_ms_per_step": 82.83999279992713,
+  "graph_replay_ms_per_step": 19.733929443359376,
+  "launch_overhead_fraction_of_eager": 0.7617825789649666,
+  "useful_bandwidth_GBs_graph": 105.12267523577675,
+  "useful_bandwidth_pct_of_measured_copy_bw_graph": 47.13984985367937,
+  "timing_errors": {},
+  "warnings": [
+    "torch.profiler recorded no CUDA kernel events, so GPU-busy time, the kernel launch count and the bandwidth derived from them are unavailable. CUPTI failing to initialise is a known problem on WSL2 (check the output for 'CUPTI initialization failed'), but that is not proven here. eager_ms_per_step / graph_replay_ms_per_step below do not use CUPTI."
+  ],
+  "note": "useful bytes = weights + KV that must be read per token (analytic); the same numerator for both variants. All bandwidths are derived (bytes / time), not hardware counters. graph_replay_ms_per_step = GPU execution time of ONE captured decode step replayed as a CUDA graph, i.e. with the per-kernel launch / Python overhead removed; it is a measurement instrument here, not a feature of the engine."
+}

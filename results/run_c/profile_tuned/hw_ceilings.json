@@ -1,0 +1,6 @@
+{
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "bandwidth_GBs_copy": 223.00171842310542,
+  "peak_fp16_matmul_GFLOPs": 31412.125519271165,
+  "datasheet_bandwidth_GBs": 256.0
+}

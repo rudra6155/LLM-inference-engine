@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "llm-inference-engine"
+version = "0.1.0"
+description = "Batch-size-1 edge inference engine for 4-bit AWQ Qwen2.5-3B with custom Triton kernels and a C++ op"
+readme = "README.md"
+requires-python = ">=3.10"
+# Pins follow AutoAWQ 0.2.9's own banner: "The last tested configuration used
+# Torch 2.6.0 and Transformers 4.51.3". torch 2.6.0 from PyPI (Linux x86_64)
+# depends on CUDA 12.4 runtime libraries and triton==3.2.0.
+dependencies = [
+    "torch==2.6.0",
+    "transformers==4.51.3",
+    "safetensors",
+    "huggingface_hub",
+    # Triton 3.2.0's CPU interpreter (used by the tests when no GPU is present) fails on
+    # numpy >= 2.4 ("only 0-dimensional arrays can be converted to Python scalars").
+    "numpy<2.4",
+    "ninja",
+]
+
+[project.optional-dependencies]
+awq = ["autoawq==0.2.9"]
+bench = ["nvidia-ml-py", "matplotlib", "pandas"]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["engine*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
+markers = [
+    "gpu: requires a CUDA device",
+    "slow: very slow on CPU; opt in with RUN_SLOW=1",
+]

@@ -1,0 +1,43 @@
+/home/rudra6155/venvs/engine/lib/python3.10/site-packages/awq/__init__.py:21: DeprecationWarning: 
+I have left this message as the final dev message to help you transition.
+
+Important Notice:
+- AutoAWQ is officially deprecated and will no longer be maintained.
+- The last tested configuration used Torch 2.6.0 and Transformers 4.51.3.
+- If future versions of Transformers break AutoAWQ compatibility, please report the issue to the Transformers project.
+
+Alternative:
+- AutoAWQ has been adopted by the vLLM Project: https://github.com/vllm-project/llm-compressor
+
+For further inquiries, feel free to reach out:
+- X: https://x.com/casper_hansen_
+- LinkedIn: https://www.linkedin.com/in/casper-hansen-804005170/
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Replacing layers...:   0%|          | 0/36 [00:00<?, ?it/s]Replacing layers...:   3%|▎         | 1/36 [00:00<00:04,  7.06it/s]Replacing layers...:   6%|▌         | 2/36 [00:00<00:04,  6.82it/s]Replacing layers...:   8%|▊         | 3/36 [00:00<00:04,  6.95it/s]Replacing layers...:  11%|█         | 4/36 [00:00<00:04,  7.03it/s]Replacing layers...:  14%|█▍        | 5/36 [00:00<00:04,  6.82it/s]Replacing layers...:  17%|█▋        | 6/36 [00:00<00:04,  6.86it/s]Replacing layers...:  19%|█▉        | 7/36 [00:01<00:04,  6.91it/s]Replacing layers...:  22%|██▏       | 8/36 [00:01<00:04,  6.92it/s]Replacing layers...:  25%|██▌       | 9/36 [00:01<00:03,  6.92it/s]Replacing layers...:  28%|██▊       | 10/36 [00:01<00:03,  6.93it/s]Replacing layers...:  31%|███       | 11/36 [00:01<00:03,  6.93it/s]Replacing layers...:  33%|███▎      | 12/36 [00:01<00:03,  6.98it/s]Replacing layers...:  36%|███▌      | 13/36 [00:01<00:03,  7.00it/s]Replacing layers...:  39%|███▉      | 14/36 [00:02<00:03,  6.79it/s]Replacing layers...:  42%|████▏     | 15/36 [00:02<00:03,  6.85it/s]Replacing layers...:  44%|████▍     | 16/36 [00:02<00:02,  6.92it/s]Replacing layers...:  47%|████▋     | 17/36 [00:02<00:02,  6.91it/s]Replacing layers...:  50%|█████     | 18/36 [00:02<00:02,  6.87it/s]Replacing layers...:  53%|█████▎    | 19/36 [00:02<00:02,  6.95it/s]Replacing layers...:  56%|█████▌    | 20/36 [00:02<00:02,  6.83it/s]Replacing layers...:  58%|█████▊    | 21/36 [00:03<00:02,  6.85it/s]Replacing layers...:  61%|██████    | 22/36 [00:03<00:02,  6.89it/s]Replacing layers...:  64%|██████▍   | 23/36 [00:03<00:01,  6.94it/s]Replacing layers...:  67%|██████▋   | 24/36 [00:03<00:01,  6.94it/s]Replacing layers...:  69%|██████▉   | 25/36 [00:03<00:01,  6.88it/s]Replacing layers...:  92%|█████████▏| 33/36 [00:03<00:00, 21.73it/s]Replacing layers...: 100%|██████████| 36/36 [00:04<00:00, 11.22it/s]Replacing layers...: 100%|██████████| 36/36 [00:04<00:00,  8.30it/s]
+/usr/lib/python3.10/distutils/command/build_ext.py:13: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+  from distutils.sysconfig import customize_compiler, get_python_version
+WARNING: torch.profiler recorded no CUDA kernel events, so GPU-busy time, the kernel launch count and the bandwidth derived from them are unavailable. CUPTI failing to initialise is a known problem on WSL2 (check the output for 'CUPTI initialization failed'), but that is not proven here. eager_ms_per_step / graph_replay_ms_per_step below do not use CUPTI.
+{
+  "variant": "custom",
+  "steps": 10,
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_busy_ms_per_step": null,
+  "wall_ms_per_step_under_profiler": 207.92602020010236,
+  "kernel_launches_per_step": null,
+  "useful_bytes_per_step": 2074483456.0,
+  "useful_bandwidth_GBs": null,
+  "measured_copy_bandwidth_GBs": 223.00171842310542,
+  "useful_bandwidth_pct_of_measured_copy_bw": null,
+  "eager_ms_per_step": 82.83999279992713,
+  "graph_replay_ms_per_step": 19.733929443359376,
+  "launch_overhead_fraction_of_eager": 0.7617825789649666,
+  "useful_bandwidth_GBs_graph": 105.12267523577675,
+  "useful_bandwidth_pct_of_measured_copy_bw_graph": 47.13984985367937,
+  "timing_errors": {},
+  "warnings": [
+    "torch.profiler recorded no CUDA kernel events, so GPU-busy time, the kernel launch count and the bandwidth derived from them are unavailable. CUPTI failing to initialise is a known problem on WSL2 (check the output for 'CUPTI initialization failed'), but that is not proven here. eager_ms_per_step / graph_replay_ms_per_step below do not use CUPTI."
+  ],
+  "note": "useful bytes = weights + KV that must be read per token (analytic); the same numerator for both variants. All bandwidths are derived (bytes / time), not hardware counters. graph_replay_ms_per_step = GPU execution time of ONE captured decode step replayed as a CUDA graph, i.e. with the per-kernel launch / Python overhead removed; it is a measurement instrument here, not a feature of the engine."
+}

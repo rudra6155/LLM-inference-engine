@@ -1,0 +1,102 @@
+{
+  "model": "Qwen2.5-3B-Instruct-AWQ",
+  "seq_len": 512,
+  "ops": [
+    {
+      "name": "q_proj",
+      "category": "4-bit GEMM",
+      "count": 36,
+      "flops": 8388608.0,
+      "bytes": 2191360.0,
+      "ai": 3.8280373831775703
+    },
+    {
+      "name": "k_proj",
+      "category": "4-bit GEMM",
+      "count": 36,
+      "flops": 1048576.0,
+      "bytes": 277504.0,
+      "ai": 3.7785977859778597
+    },
+    {
+      "name": "v_proj",
+      "category": "4-bit GEMM",
+      "count": 36,
+      "flops": 1048576.0,
+      "bytes": 277504.0,
+      "ai": 3.7785977859778597
+    },
+    {
+      "name": "o_proj",
+      "category": "4-bit GEMM",
+      "count": 36,
+      "flops": 8388608.0,
+      "bytes": 2187264.0,
+      "ai": 3.8352059925093633
+    },
+    {
+      "name": "gate_proj",
+      "category": "4-bit GEMM",
+      "count": 36,
+      "flops": 45088768.0,
+      "bytes": 11738624.0,
+      "ai": 3.841060758058185
+    },
+    {
+      "name": "up_proj",
+      "category": "4-bit GEMM",
+      "count": 36,
+      "flops": 45088768.0,
+      "bytes": 11738624.0,
+      "ai": 3.841060758058185
+    },
+    {
+      "name": "down_proj",
+      "category": "4-bit GEMM",
+      "count": 36,
+      "flops": 45088768.0,
+      "bytes": 11738624.0,
+      "ai": 3.841060758058185
+    },
+    {
+      "name": "lm_head",
+      "category": "lm_head fp16",
+      "count": 1,
+      "flops": 622329856.0,
+      "bytes": 622637824,
+      "ai": 0.9995053817996126
+    },
+    {
+      "name": "attention (S=512)",
+      "category": "decode attention",
+      "count": 36,
+      "flops": 4194304.0,
+      "bytes": 532480,
+      "ai": 7.876923076923077
+    },
+    {
+      "name": "rmsnorm",
+      "category": "RMSNorm",
+      "count": 73,
+      "flops": 8192.0,
+      "bytes": 12288,
+      "ai": 0.6666666666666666
+    }
+  ],
+  "per_token": {
+    "flops": 6322987008.0,
+    "bytes": 2088086272.0,
+    "ai": 3.0281253666515173,
+    "kv_cache_bytes_read": 18874368,
+    "min_time_ms_at_datasheet_bw": 8.156587,
+    "max_tokens_per_s_at_datasheet_bw": 122.6002983846062
+  },
+  "ceilings": {
+    "datasheet_bandwidth_GBs": 256.0,
+    "fp32_nontensor_peak_GFLOPs_range": [
+      9523.2,
+      14561.28
+    ],
+    "note": "datasheet bandwidth derived from a third-party listing (128-bit x 16 Gbps); FP32 band = 3072 cores x 2 FLOP x third-party clock range. Neither is measured."
+  }
+}

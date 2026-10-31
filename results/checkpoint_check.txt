@@ -1,0 +1,35 @@
+source: https://huggingface.co/Qwen/Qwen2.5-3B-Instruct-AWQ/resolve/main/model.safetensors
+tensors: 939  (expected 36 layers x 26 + embed + lm_head + final norm = 939)
+total tensor bytes: 2,686,599,168
+decoder-layer qweight+qzeros+scales+bias bytes: 1,441,640,448
+embed_tokens bytes: 622,329,856   lm_head bytes: 622,329,856
+layer-0 tensors:
+  model.layers.0.input_layernorm.weight                   F16 [2048]
+  model.layers.0.mlp.down_proj.qweight                    I32 [11008, 256]
+  model.layers.0.mlp.down_proj.qzeros                     I32 [86, 256]
+  model.layers.0.mlp.down_proj.scales                     F16 [86, 2048]
+  model.layers.0.mlp.gate_proj.qweight                    I32 [2048, 1376]
+  model.layers.0.mlp.gate_proj.qzeros                     I32 [16, 1376]
+  model.layers.0.mlp.gate_proj.scales                     F16 [16, 11008]
+  model.layers.0.mlp.up_proj.qweight                      I32 [2048, 1376]
+  model.layers.0.mlp.up_proj.qzeros                       I32 [16, 1376]
+  model.layers.0.mlp.up_proj.scales                       F16 [16, 11008]
+  model.layers.0.post_attention_layernorm.weight          F16 [2048]
+  model.layers.0.self_attn.k_proj.bias                    F16 [256]
+  model.layers.0.self_attn.k_proj.qweight                 I32 [2048, 32]
+  model.layers.0.self_attn.k_proj.qzeros                  I32 [16, 32]
+  model.layers.0.self_attn.k_proj.scales                  F16 [16, 256]
+  model.layers.0.self_attn.o_proj.qweight                 I32 [2048, 256]
+  model.layers.0.self_attn.o_proj.qzeros                  I32 [16, 256]
+  model.layers.0.self_attn.o_proj.scales                  F16 [16, 2048]
+  model.layers.0.self_attn.q_proj.bias                    F16 [2048]
+  model.layers.0.self_attn.q_proj.qweight                 I32 [2048, 256]
+  model.layers.0.self_attn.q_proj.qzeros                  I32 [16, 256]
+  model.layers.0.self_attn.q_proj.scales                  F16 [16, 2048]
+  model.layers.0.self_attn.v_proj.bias                    F16 [256]
+  model.layers.0.self_attn.v_proj.qweight                 I32 [2048, 32]
+  model.layers.0.self_attn.v_proj.qzeros                  I32 [16, 32]
+  model.layers.0.self_attn.v_proj.scales                  F16 [16, 256]
+sha256(lm_head.weight)           = 6be2a141e6242b71aaed7a16c3b4afb86cdb71ccf2ce40f43152715649a4cc82
+sha256(model.embed_tokens.weight) = 6be2a141e6242b71aaed7a16c3b4afb86cdb71ccf2ce40f43152715649a4cc82
+RESULT: lm_head and embed_tokens are BYTE-IDENTICAL

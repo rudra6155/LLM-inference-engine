@@ -1,0 +1,95 @@
+== building the shared prompt (128 tokens)
+wrote 128 prompt tokens to results/prompt.json
+== backend: engine
+/home/rudra6155/venvs/engine/lib/python3.10/site-packages/awq/__init__.py:21: DeprecationWarning: 
+I have left this message as the final dev message to help you transition.
+
+Important Notice:
+- AutoAWQ is officially deprecated and will no longer be maintained.
+- The last tested configuration used Torch 2.6.0 and Transformers 4.51.3.
+- If future versions of Transformers break AutoAWQ compatibility, please report the issue to the Transformers project.
+
+Alternative:
+- AutoAWQ has been adopted by the vLLM Project: https://github.com/vllm-project/llm-compressor
+
+For further inquiries, feel free to reach out:
+- X: https://x.com/casper_hansen_
+- LinkedIn: https://www.linkedin.com/in/casper-hansen-804005170/
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Replacing layers...:   0%|          | 0/36 [00:00<?, ?it/s]Replacing layers...:   3%|▎         | 1/36 [00:00<00:06,  5.76it/s]Replacing layers...:   6%|▌         | 2/36 [00:00<00:05,  6.28it/s]Replacing layers...:   8%|▊         | 3/36 [00:00<00:05,  6.58it/s]Replacing layers...:  11%|█         | 4/36 [00:00<00:04,  6.67it/s]Replacing layers...:  14%|█▍        | 5/36 [00:00<00:04,  6.73it/s]Replacing layers...:  17%|█▋        | 6/36 [00:00<00:04,  6.75it/s]Replacing layers...:  19%|█▉        | 7/36 [00:01<00:04,  6.80it/s]Replacing layers...:  22%|██▏       | 8/36 [00:01<00:04,  6.82it/s]Replacing layers...:  25%|██▌       | 9/36 [00:01<00:03,  6.84it/s]Replacing layers...:  28%|██▊       | 10/36 [00:01<00:03,  6.87it/s]Replacing layers...:  31%|███       | 11/36 [00:01<00:03,  6.89it/s]Replacing layers...:  33%|███▎      | 12/36 [00:01<00:03,  6.89it/s]Replacing layers...:  36%|███▌      | 13/36 [00:01<00:03,  6.89it/s]Replacing layers...:  39%|███▉      | 14/36 [00:02<00:03,  6.91it/s]Replacing layers...:  42%|████▏     | 15/36 [00:02<00:03,  6.76it/s]Replacing layers...:  44%|████▍     | 16/36 [00:02<00:02,  6.80it/s]Replacing layers...:  47%|████▋     | 17/36 [00:02<00:02,  6.84it/s]Replacing layers...:  50%|█████     | 18/36 [00:02<00:02,  6.90it/s]Replacing layers...:  53%|█████▎    | 19/36 [00:02<00:02,  6.88it/s]Replacing layers...:  56%|█████▌    | 20/36 [00:02<00:02,  6.90it/s]Replacing layers...:  58%|█████▊    | 21/36 [00:03<00:02,  6.95it/s]Replacing layers...:  61%|██████    | 22/36 [00:03<00:02,  6.94it/s]Replacing layers...:  64%|██████▍   | 23/36 [00:03<00:01,  6.83it/s]Replacing layers...:  67%|██████▋   | 24/36 [00:03<00:01,  6.85it/s]Replacing layers...:  69%|██████▉   | 25/36 [00:03<00:01,  6.89it/s]Replacing layers...:  72%|███████▏  | 26/36 [00:03<00:01,  6.90it/s]Replacing layers...:  75%|███████▌  | 27/36 [00:03<00:01,  6.92it/s]Replacing layers...:  78%|███████▊  | 28/36 [00:04<00:01,  6.93it/s]Replacing layers...:  81%|████████  | 29/36 [00:04<00:01,  6.87it/s]Replacing layers...:  83%|████████▎ | 30/36 [00:04<00:00,  6.90it/s]Replacing layers...:  86%|████████▌ | 31/36 [00:04<00:00,  6.95it/s]Replacing layers...:  89%|████████▉ | 32/36 [00:04<00:00,  6.89it/s]Replacing layers...:  92%|█████████▏| 33/36 [00:04<00:00,  6.94it/s]Replacing layers...:  94%|█████████▍| 34/36 [00:04<00:00,  6.90it/s]Replacing layers...:  97%|█████████▋| 35/36 [00:05<00:00,  6.91it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  6.89it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  6.84it/s]
+/usr/lib/python3.10/distutils/command/build_ext.py:13: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+  from distutils.sysconfig import customize_compiler, get_python_version
+{"backend": "engine", "decode_tok_s": 12.814405855776387, "ttft_ms_p50": 132.2465644998374, "itl_ms_p99": 108.03026687011878, "peak_vram_mib": 2823.3046875}
+== backend: engine-graph
+/home/rudra6155/venvs/engine/lib/python3.10/site-packages/awq/__init__.py:21: DeprecationWarning: 
+I have left this message as the final dev message to help you transition.
+
+Important Notice:
+- AutoAWQ is officially deprecated and will no longer be maintained.
+- The last tested configuration used Torch 2.6.0 and Transformers 4.51.3.
+- If future versions of Transformers break AutoAWQ compatibility, please report the issue to the Transformers project.
+
+Alternative:
+- AutoAWQ has been adopted by the vLLM Project: https://github.com/vllm-project/llm-compressor
+
+For further inquiries, feel free to reach out:
+- X: https://x.com/casper_hansen_
+- LinkedIn: https://www.linkedin.com/in/casper-hansen-804005170/
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Replacing layers...:   0%|          | 0/36 [00:00<?, ?it/s]Replacing layers...:   3%|▎         | 1/36 [00:00<00:04,  7.02it/s]Replacing layers...:   6%|▌         | 2/36 [00:00<00:04,  6.98it/s]Replacing layers...:   8%|▊         | 3/36 [00:00<00:04,  6.91it/s]Replacing layers...:  11%|█         | 4/36 [00:00<00:04,  6.96it/s]Replacing layers...:  14%|█▍        | 5/36 [00:00<00:04,  7.03it/s]Replacing layers...:  17%|█▋        | 6/36 [00:00<00:04,  7.02it/s]Replacing layers...:  19%|█▉        | 7/36 [00:01<00:04,  7.01it/s]Replacing layers...:  22%|██▏       | 8/36 [00:01<00:04,  6.85it/s]Replacing layers...:  25%|██▌       | 9/36 [00:01<00:04,  6.70it/s]Replacing layers...:  28%|██▊       | 10/36 [00:01<00:03,  6.80it/s]Replacing layers...:  31%|███       | 11/36 [00:01<00:03,  6.88it/s]Replacing layers...:  33%|███▎      | 12/36 [00:01<00:03,  6.92it/s]Replacing layers...:  36%|███▌      | 13/36 [00:01<00:03,  7.00it/s]Replacing layers...:  39%|███▉      | 14/36 [00:02<00:03,  6.96it/s]Replacing layers...:  42%|████▏     | 15/36 [00:02<00:03,  6.95it/s]Replacing layers...:  44%|████▍     | 16/36 [00:02<00:02,  6.86it/s]Replacing layers...:  47%|████▋     | 17/36 [00:02<00:02,  6.89it/s]Replacing layers...:  50%|█████     | 18/36 [00:02<00:02,  6.78it/s]Replacing layers...:  53%|█████▎    | 19/36 [00:02<00:02,  6.87it/s]Replacing layers...:  56%|█████▌    | 20/36 [00:02<00:02,  6.88it/s]Replacing layers...:  81%|████████  | 29/36 [00:03<00:00, 21.49it/s]Replacing layers...:  86%|████████▌ | 31/36 [00:03<00:00, 14.75it/s]Replacing layers...:  92%|█████████▏| 33/36 [00:03<00:00, 11.68it/s]Replacing layers...:  97%|█████████▋| 35/36 [00:03<00:00, 10.08it/s]Replacing layers...: 100%|██████████| 36/36 [00:04<00:00,  8.76it/s]
+/usr/lib/python3.10/distutils/command/build_ext.py:13: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+  from distutils.sysconfig import customize_compiler, get_python_version
+{"backend": "engine-graph", "decode_tok_s": 68.96576221869873, "ttft_ms_p50": 78.75148150014866, "itl_ms_p99": 15.266643011218548, "peak_vram_mib": 2896.6171875}
+== backend: engine-tuned
+/home/rudra6155/venvs/engine/lib/python3.10/site-packages/awq/__init__.py:21: DeprecationWarning: 
+I have left this message as the final dev message to help you transition.
+
+Important Notice:
+- AutoAWQ is officially deprecated and will no longer be maintained.
+- The last tested configuration used Torch 2.6.0 and Transformers 4.51.3.
+- If future versions of Transformers break AutoAWQ compatibility, please report the issue to the Transformers project.
+
+Alternative:
+- AutoAWQ has been adopted by the vLLM Project: https://github.com/vllm-project/llm-compressor
+
+For further inquiries, feel free to reach out:
+- X: https://x.com/casper_hansen_
+- LinkedIn: https://www.linkedin.com/in/casper-hansen-804005170/
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Replacing layers...:   0%|          | 0/36 [00:00<?, ?it/s]Replacing layers...:   3%|▎         | 1/36 [00:00<00:05,  6.41it/s]Replacing layers...:   6%|▌         | 2/36 [00:00<00:05,  6.52it/s]Replacing layers...:   8%|▊         | 3/36 [00:00<00:04,  6.61it/s]Replacing layers...:  11%|█         | 4/36 [00:00<00:04,  6.69it/s]Replacing layers...:  14%|█▍        | 5/36 [00:00<00:04,  6.67it/s]Replacing layers...:  17%|█▋        | 6/36 [00:00<00:04,  6.66it/s]Replacing layers...:  19%|█▉        | 7/36 [00:01<00:04,  6.68it/s]Replacing layers...:  22%|██▏       | 8/36 [00:01<00:04,  6.72it/s]Replacing layers...:  25%|██▌       | 9/36 [00:01<00:04,  6.70it/s]Replacing layers...:  28%|██▊       | 10/36 [00:01<00:03,  6.72it/s]Replacing layers...:  31%|███       | 11/36 [00:01<00:03,  6.73it/s]Replacing layers...:  33%|███▎      | 12/36 [00:01<00:03,  6.71it/s]Replacing layers...:  36%|███▌      | 13/36 [00:01<00:03,  6.71it/s]Replacing layers...:  39%|███▉      | 14/36 [00:02<00:03,  6.60it/s]Replacing layers...:  42%|████▏     | 15/36 [00:02<00:03,  6.63it/s]Replacing layers...:  44%|████▍     | 16/36 [00:02<00:03,  6.65it/s]Replacing layers...:  47%|████▋     | 17/36 [00:02<00:02,  6.59it/s]Replacing layers...:  50%|█████     | 18/36 [00:02<00:02,  6.59it/s]Replacing layers...:  53%|█████▎    | 19/36 [00:02<00:02,  6.60it/s]Replacing layers...:  56%|█████▌    | 20/36 [00:03<00:02,  6.63it/s]Replacing layers...:  58%|█████▊    | 21/36 [00:03<00:02,  6.67it/s]Replacing layers...:  61%|██████    | 22/36 [00:03<00:02,  6.65it/s]Replacing layers...:  64%|██████▍   | 23/36 [00:03<00:01,  6.67it/s]Replacing layers...:  67%|██████▋   | 24/36 [00:03<00:01,  6.66it/s]Replacing layers...:  69%|██████▉   | 25/36 [00:03<00:01,  6.70it/s]Replacing layers...:  72%|███████▏  | 26/36 [00:03<00:01,  6.68it/s]Replacing layers...:  75%|███████▌  | 27/36 [00:04<00:01,  6.67it/s]Replacing layers...:  78%|███████▊  | 28/36 [00:04<00:01,  6.69it/s]Replacing layers...:  81%|████████  | 29/36 [00:04<00:01,  6.66it/s]Replacing layers...:  83%|████████▎ | 30/36 [00:04<00:00,  6.71it/s]Replacing layers...:  86%|████████▌ | 31/36 [00:04<00:00,  6.37it/s]Replacing layers...:  89%|████████▉ | 32/36 [00:04<00:00,  6.43it/s]Replacing layers...:  92%|█████████▏| 33/36 [00:04<00:00,  6.51it/s]Replacing layers...:  94%|█████████▍| 34/36 [00:05<00:00,  6.56it/s]Replacing layers...:  97%|█████████▋| 35/36 [00:05<00:00,  6.58it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  6.64it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  6.63it/s]
+/usr/lib/python3.10/distutils/command/build_ext.py:13: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+  from distutils.sysconfig import customize_compiler, get_python_version
+{"backend": "engine-tuned", "decode_tok_s": 12.523236943062217, "ttft_ms_p50": 141.08660250076355, "itl_ms_p99": 104.55433582983456, "peak_vram_mib": 2828.6171875}
+== backend: engine-graph-tuned
+/home/rudra6155/venvs/engine/lib/python3.10/site-packages/awq/__init__.py:21: DeprecationWarning: 
+I have left this message as the final dev message to help you transition.
+
+Important Notice:
+- AutoAWQ is officially deprecated and will no longer be maintained.
+- The last tested configuration used Torch 2.6.0 and Transformers 4.51.3.
+- If future versions of Transformers break AutoAWQ compatibility, please report the issue to the Transformers project.
+
+Alternative:
+- AutoAWQ has been adopted by the vLLM Project: https://github.com/vllm-project/llm-compressor
+
+For further inquiries, feel free to reach out:
+- X: https://x.com/casper_hansen_
+- LinkedIn: https://www.linkedin.com/in/casper-hansen-804005170/
+
+  warnings.warn(_FINAL_DEV_MESSAGE, category=DeprecationWarning, stacklevel=1)
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Replacing layers...:   0%|          | 0/36 [00:00<?, ?it/s]Replacing layers...:   3%|▎         | 1/36 [00:00<00:05,  6.71it/s]Replacing layers...:   6%|▌         | 2/36 [00:00<00:05,  6.64it/s]Replacing layers...:   8%|▊         | 3/36 [00:00<00:05,  6.56it/s]Replacing layers...:  11%|█         | 4/36 [00:00<00:04,  6.61it/s]Replacing layers...:  14%|█▍        | 5/36 [00:00<00:04,  6.61it/s]Replacing layers...:  17%|█▋        | 6/36 [00:00<00:04,  6.51it/s]Replacing layers...:  19%|█▉        | 7/36 [00:01<00:04,  6.59it/s]Replacing layers...:  22%|██▏       | 8/36 [00:01<00:04,  6.56it/s]Replacing layers...:  25%|██▌       | 9/36 [00:01<00:04,  6.48it/s]Replacing layers...:  28%|██▊       | 10/36 [00:01<00:03,  6.57it/s]Replacing layers...:  31%|███       | 11/36 [00:01<00:03,  6.65it/s]Replacing layers...:  33%|███▎      | 12/36 [00:01<00:03,  6.70it/s]Replacing layers...:  36%|███▌      | 13/36 [00:01<00:03,  6.68it/s]Replacing layers...:  39%|███▉      | 14/36 [00:02<00:03,  6.72it/s]Replacing layers...:  42%|████▏     | 15/36 [00:02<00:03,  6.69it/s]Replacing layers...:  44%|████▍     | 16/36 [00:02<00:03,  6.61it/s]Replacing layers...:  47%|████▋     | 17/36 [00:02<00:02,  6.62it/s]Replacing layers...:  50%|█████     | 18/36 [00:02<00:02,  6.58it/s]Replacing layers...:  53%|█████▎    | 19/36 [00:02<00:02,  6.64it/s]Replacing layers...:  56%|█████▌    | 20/36 [00:03<00:02,  6.63it/s]Replacing layers...:  58%|█████▊    | 21/36 [00:03<00:02,  6.68it/s]Replacing layers...:  61%|██████    | 22/36 [00:03<00:02,  6.64it/s]Replacing layers...:  64%|██████▍   | 23/36 [00:03<00:01,  6.56it/s]Replacing layers...:  67%|██████▋   | 24/36 [00:03<00:01,  6.61it/s]Replacing layers...:  69%|██████▉   | 25/36 [00:03<00:01,  6.66it/s]Replacing layers...:  72%|███████▏  | 26/36 [00:03<00:01,  6.62it/s]Replacing layers...:  75%|███████▌  | 27/36 [00:04<00:01,  6.63it/s]Replacing layers...:  78%|███████▊  | 28/36 [00:04<00:01,  6.59it/s]Replacing layers...:  81%|████████  | 29/36 [00:04<00:01,  6.60it/s]Replacing layers...:  83%|████████▎ | 30/36 [00:04<00:00,  6.36it/s]Replacing layers...:  86%|████████▌ | 31/36 [00:04<00:00,  6.26it/s]Replacing layers...:  89%|████████▉ | 32/36 [00:04<00:00,  6.02it/s]Replacing layers...:  92%|█████████▏| 33/36 [00:05<00:00,  5.97it/s]Replacing layers...:  94%|█████████▍| 34/36 [00:05<00:00,  6.00it/s]Replacing layers...:  97%|█████████▋| 35/36 [00:05<00:00,  5.89it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  5.98it/s]Replacing layers...: 100%|██████████| 36/36 [00:05<00:00,  6.46it/s]
+/usr/lib/python3.10/distutils/command/build_ext.py:13: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+  from distutils.sysconfig import customize_compiler, get_python_version
+{"backend": "engine-graph-tuned", "decode_tok_s": 74.14225080781654, "ttft_ms_p50": 80.50935049959662, "itl_ms_p99": 14.227826110181919, "peak_vram_mib": 2896.6171875}
+== backend: llamacpp
+{"backend": "llama.cpp", "decode_tok_s": 101.70183683176616, "ttft_ms_p50": 34.83282899833284, "itl_ms_p99": 11.67087677038579, "peak_vram_mib": 2284.6171875}
+== plotting
+wrote /home/rudra6155/LLM-inference-engine/results/run_c/throughput.png from 5 backend row(s)
+== done. results: /home/rudra6155/LLM-inference-engine/results/run_c/benchmark.csv   skipped backends (if any): /home/rudra6155/LLM-inference-engine/results/run_c/benchmark_skips.log

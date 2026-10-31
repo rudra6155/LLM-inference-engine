@@ -1,0 +1,69 @@
+################ SUMMARY  2026-10-30T17:59:27Z ################
+
+== steps: name <TAB> exit code <TAB> seconds ==
+preflight	0	5s
+install	0	5s
+tests	0	25s
+roofline	0	4s
+tune	0	338s
+benchmark	0	374s
+profile	0	37s
+
+== git ==
+10cb180f1a50d37bd32aca0b93c39200ee03b4d6  Add CUDA-graph decode, split-KV attention and a kernel tuner (untested on GPU)
+?? results/run_c/
+
+== tests ==
+188 passed, 3 skipped, 3 deselected, 2 warnings in 21.82s
+
+== benchmark.csv ==
+backend                  tok/s  ttft ms  itl p50  itl p99  itl max  VRAM MiB  notes
+engine                   12.81    132.2     76.1    108.0    146.4      2823  loader=autoawq
+engine-graph             68.97     78.8     14.5     15.3     15.7      2897  cuda_graph=on; loader=autoawq
+engine-tuned             12.52    141.1     78.0    104.6    117.1      2829  loader=autoawq; tuned_config=/home/rudra6155/LLM-inference-engine/results/run_c/tuning/best_configs.json
+engine-graph-tuned       74.14     80.5     13.4     14.2     14.7      2897  cuda_graph=on; loader=autoawq; tuned_config=/home/rudra6155/LLM-inference-engine/results/run_c/tuning/best_configs.json
+llama.cpp               101.70     34.8      9.7     11.7     20.1      2285  flash_attn=True; n_gpu_layers=-1; tokenizer_agrees_with_hf=yes
+
+== benchmark_skips.log ==
+(none)
+
+== hw_ceilings.json ==
+{
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "bandwidth_GBs_copy": 223.00171842310542,
+  "peak_fp16_matmul_GFLOPs": 31412.125519271165,
+  "datasheet_bandwidth_GBs": 256.0
+}
+== tuning: default vs chosen (see /home/rudra6155/LLM-inference-engine/results/run_c/tuning/best_configs.json) ==
+== summary (microseconds per call; GB/s = packed weight bytes / time)
+       shape  default us  default GB/s  chosen us  chosen GB/s  speedup  pick
+ 2048x256            6.6          41.3        5.8         46.6    1.13x  tuned
+ 2048x2048          23.0          94.8       20.8        104.9    1.11x  tuned
+ 2048x11008         78.0         150.2       67.3        174.0    1.16x  tuned
+11008x2048         101.2         115.8       77.9        150.4    1.30x  tuned
+   attention        6.26                     6.26                 1.00x  default (defaults)
+
+wrote /home/rudra6155/LLM-inference-engine/results/run_c/tuning/best_configs.json (+ sweeps) in 336 s
+
+== profile_untuned (CUPTI-free) ==
+  eager_ms_per_step: 82.83999279992713
+  graph_replay_ms_per_step: 19.733929443359376
+  launch_overhead_fraction_of_eager: 0.7617825789649666
+  useful_bandwidth_GBs_graph: 105.12267523577675
+  useful_bandwidth_pct_of_measured_copy_bw_graph: 47.13984985367937
+  timing_errors: {}
+
+== profile_tuned (CUPTI-free) ==
+  eager_ms_per_step: 82.10942639998393
+  graph_replay_ms_per_step: 14.92996826171875
+  launch_overhead_fraction_of_eager: 0.8181698628731174
+  useful_bandwidth_GBs_graph: 138.9476132591044
+  useful_bandwidth_pct_of_measured_copy_bw_graph: 62.30786661270316
+  timing_errors: {}
+
+== environment ==
+autoawq==0.2.9
+numpy==2.2.6
+torch==2.6.0
+transformers==4.51.3
+triton==3.2.0

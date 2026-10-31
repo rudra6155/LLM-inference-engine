@@ -1,0 +1,12 @@
+CAUGHT    gemm: wrong nibble order                           [1 failed, 19 deselected in 0.22s]
+CAUGHT    gemm: split-K drops the last partial               [1 failed, 1 passed, 28 deselected in 0.34s]
+CAUGHT    attention: wrong GQA head mapping                  [1 failed, 25 deselected in 0.23s]
+CAUGHT    attention: positions beyond seq_len not masked     [1 failed, 25 deselected in 0.21s]
+CAUGHT    kv cache: write at the wrong offset                [1 failed, 27 deselected in 0.16s]
+CAUGHT    model: q/k/v bias dropped                          [1 failed, 2 passed, 24 deselected in 28.97s]
+CAUGHT    model: RoPE applied to q at the wrong position     [1 failed, 22 deselected in 27.19s]
+CAUGHT    model: k not rotated                               [1 failed, 22 deselected in 27.82s]
+CAUGHT    model: wrong RoPE theta                            [1 failed, 22 deselected in 28.10s]
+CAUGHT    model: gate/up swapped in SwiGLU                   [1 failed, 22 deselected in 28.51s]
+CAUGHT    model: GQA heads repeated in the wrong order       [1 failed, 22 deselected in 26.91s]
+11 of 11 mutants caught

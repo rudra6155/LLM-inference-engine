@@ -1,0 +1,17 @@
+op,shape,mode,tolerance,max_abs_diff
+awq_gemm (fp32 out),M=1 K=2048 N=2048,compiled-cuda,atol 1e-3,2.956e-05
+awq_gemm (fp32 out),M=1 K=2048 N=256,compiled-cuda,atol 1e-3,1.144e-05
+awq_gemm (fp32 out),M=1 K=2048 N=11008,compiled-cuda,atol 1e-3,8.488e-05
+awq_gemm (fp32 out),M=1 K=11008 N=2048,compiled-cuda,atol 1e-3,2.174e-04
+awq_gemm (fp32 out),M=4 K=2048 N=2048,compiled-cuda,atol 1e-3,1.907e-05
+awq_gemm (fp32 out),M=17 K=2048 N=2048,compiled-cuda,atol 1e-3,2.289e-05
+fused_decode_attention,Hq=16 Hkv=2 D=128 S=1,compiled-cuda,atol 1e-3,0.000e+00
+fused_decode_attention,Hq=16 Hkv=2 D=128 S=64,compiled-cuda,atol 1e-3,5.187e-04
+fused_decode_attention,Hq=16 Hkv=2 D=128 S=200,compiled-cuda,atol 1e-3,5.050e-04
+fused_decode_attention,Hq=16 Hkv=2 D=128 S=512,compiled-cuda,atol 1e-3,4.808e-04
+cpp rmsnorm (float32),rows=1 hidden=2048,cpu-extension,atol 1e-4,0.000e+00
+cpp rmsnorm (float32),rows=8 hidden=2048,cpu-extension,atol 1e-4,9.537e-07
+cpp rmsnorm (float32),rows=128 hidden=2048,cpu-extension,atol 1e-4,1.907e-06
+cpp rmsnorm (float16),rows=1 hidden=2048,cpu-extension,fp16 rounding (1e-3 + 2e-3*|ref|),0.000e+00
+cpp rmsnorm (float16),rows=8 hidden=2048,cpu-extension,fp16 rounding (1e-3 + 2e-3*|ref|),0.000e+00
+cpp rmsnorm (float16),rows=128 hidden=2048,cpu-extension,fp16 rounding (1e-3 + 2e-3*|ref|),1.953e-03

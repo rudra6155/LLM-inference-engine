@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "meta": {
+    "created_utc": "2026-10-30T17:52:36+00:00",
+    "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "sm_count": 24,
+    "l2_cache_bytes": 33554432,
+    "torch": "2.6.0+cu124",
+    "python": "3.10.12",
+    "timing": "CUDA graph replay of calls cycling through distinct weight/KV copies (working set >= 4x L2, >= 128 MiB)",
+    "min_gain": 0.03,
+    "space": "standard",
+    "checked_against": "fp32 reference, atol 1e-3, for every candidate",
+    "awq_gemm_results": [
+      {
+        "us": 5.839,
+        "picked": "tuned",
+        "speedup": 1.131,
+        "default_us": 6.602,
+        "K": 2048,
+        "N": 256,
+        "weight_bytes": 272384,
+        "copies": 493,
+        "default_GBs": 41.261,
+        "chosen_GBs": 46.647,
+        "cfg": {
+          "BLOCK_M": 16,
+          "BLOCK_N": 64,
+          "BLOCK_K": 64,
+          "SPLIT_K": 16,
+          "num_warps": 4,
+          "num_stages": 4
+        }
+      },
+      {
+        "us": 20.772,
+        "picked": "tuned",
+        "speedup": 1.106,
+        "default_us": 22.976,
+        "K": 2048,
+        "N": 2048,
+        "weight_bytes": 2179072,
+        "copies": 62,
+        "default_GBs": 94.843,
+        "chosen_GBs": 104.903,
+        "cfg": {
+          "BLOCK_M": 16,
+          "BLOCK_N": 64,
+          "BLOCK_K": 64,
+          "SPLIT_K": 4,
+          "num_warps": 4,
+          "num_stages": 2
+        }
+      },
+      {
+        "us": 67.311,
+        "picked": "tuned",
+        "speedup": 1.159,
+        "default_us": 78.0,
+        "K": 2048,
+        "N": 11008,
+        "weight_bytes": 11712512,
+        "copies": 12,
+        "default_GBs": 150.16,
+        "chosen_GBs": 174.006,
+        "cfg": {
+          "BLOCK_M": 16,
+          "BLOCK_N": 64,
+          "BLOCK_K": 64,
+          "SPLIT_K": 2,
+          "num_warps": 4,
+          "num_stages": 2
+        }
+      },
+      {
+        "us": 77.858,
+        "picked": "tuned",
+        "speedup": 1.3,
+        "default_us": 101.18,
+        "K": 11008,
+        "N": 2048,
+        "weight_bytes": 11712512,
+        "copies": 12,
+        "default_GBs": 115.759,
+        "chosen_GBs": 150.434,
+        "cfg": {
+          "BLOCK_M": 16,
+          "BLOCK_N": 128,
+          "BLOCK_K": 64,
+          "SPLIT_K": 4,
+          "num_warps": 8,
+          "num_stages": 2
+        }
+      }
+    ],
+    "attention_result": {
+      "cfg": {},
+      "us": 6.26,
+      "picked": "default",
+      "speedup": 1.0,
+      "default_us": 6.26,
+      "best_seen_us": 7.962,
+      "kv_bytes_per_call_at_max_seq": 1048576,
+      "copies": 128,
+      "seq_lens": [
+        128,
+        256,
+        512
+      ]
+    },
+    "triton": "3.2.0"
+  },
+  "awq_gemm": {
+    "2048x256": {
+      "BLOCK_M": 16,
+      "BLOCK_N": 64,
+      "BLOCK_K": 64,
+      "SPLIT_K": 16,
+      "num_warps": 4,
+      "num_stages": 4
+    },
+    "2048x2048": {
+      "BLOCK_M": 16,
+      "BLOCK_N": 64,
+      "BLOCK_K": 64,
+      "SPLIT_K": 4,
+      "num_warps": 4,
+      "num_stages": 2
+    },
+    "2048x11008": {
+      "BLOCK_M": 16,
+      "BLOCK_N": 64,
+      "BLOCK_K": 64,
+      "SPLIT_K": 2,
+      "num_warps": 4,
+      "num_stages": 2
+    },
+    "11008x2048": {
+      "BLOCK_M": 16,
+      "BLOCK_N": 128,
+      "BLOCK_K": 64,
+      "SPLIT_K": 4,
+      "num_warps": 8,
+      "num_stages": 2
+    }
+  },
+  "attention": {}
+}
