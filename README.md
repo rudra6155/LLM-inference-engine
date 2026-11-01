@@ -12,16 +12,17 @@ The core motivation was first-principles systems profiling: build an autoregress
 
 Starting from naive eager execution at **12.81 tokens/sec**, I profiled the host/device bottleneck and pushed throughput to **74.14 tokens/sec** via CUDA graph capture and Triton kernel tuning.
 
-| Backend | Decode Tokens/sec | TTFT (ms) | Inter-Token p99 (ms) | Peak VRAM (MiB) | Bandwidth Utilization |
+| Backend | Decode Tokens/sec | TTFT (ms) | Inter-Token p99 (ms) | Peak VRAM (MiB) | Bandwidth Utilization* |
 |---|---|---|---|---|---|
-| **Custom Engine (Eager)** | 12.81 | 132.2 | 108.0 | 2823 | 9.8% |
-| **Custom Engine + CUDA Graphs** | 68.97 | 78.8 | 15.3 | 2897 | 53.7% |
-| **Custom Engine + Graphs + Tuned Kernels** | **74.14** | **80.5** | **14.2** | **2897** | **62.3%** |
+| **Custom Engine (Eager)** | 12.81 | 132.2 | 108.0 | 2823 | 11.6% |
+| **Custom Engine + CUDA Graphs** | 68.97 | 78.8 | 15.3 | 2897 | 62.5% |
+| **Custom Engine + Graphs + Tuned Kernels** | **74.14** | **80.5** | **14.2** | **2897** | **67.2%** |
 | **llama.cpp (Q4_K_M)** | 101.70 | 34.8 | 11.7 | 2285 | 86.3% |
 
 *Model: Qwen2.5-3B-Instruct (4-bit AWQ / GGUF Q4_K_M), context 128 prompt + 128 decode, batch size 1. Measured on Ubuntu 22.04 LTS via WSL2.*
+*\*Bandwidth utilization relative to measured device copy bandwidth (229.1 GB/s). Relative to the 256 GB/s datasheet ceiling, the tuned engine achieves 60.1% (isolated profile trace in `profile_custom_summary.json` measured 62.3% at 14.93ms step time on an unboosted run).*
 
-The engine doesn't beat llama.cpp—it trails by **1.37x**. But profiling explained exactly where every microsecond goes: closing the gap from **8x slower down to 1.37x** by eliminating Python launch overhead and fixing DRAM access coalescing. Full analysis in [`FINDINGS.md`](FINDINGS.md).
+The engine doesn't beat llama.cpp—it trails by **1.37x** (101.70 / 74.14). But profiling explained exactly where every microsecond goes: closing the gap from **7.9x slower (Run C baseline) down to 1.37x** by eliminating Python launch overhead and fixing DRAM access coalescing. Full analysis in [`FINDINGS.md`](FINDINGS.md).
 
 ---
 
@@ -42,7 +43,7 @@ The engine doesn't beat llama.cpp—it trails by **1.37x**. But profiling explai
    - CUDA path: Dispatches ATen kernels inside C++ to shave off Python interpreter overhead per sub-layer.
 
 4. **CUDA Graph Capture & Replay:**
-   - Eager PyTorch was spending **81% of execution time** in host Python overhead launching ~1,630 individual Triton kernels per token (~45 µs launch latency each).
+   - Eager PyTorch was spending **~81% of execution time in host launch overhead** (profiler measured ~82–90 ms eager step vs ~15–17 ms replayed via CUDA graph). Dispatching ~350+ individual operations per token through the Python runtime and CUDA driver queues completely dwarfed actual GPU execution time.
    - The entire decode iteration is captured into a single CUDA graph and replayed with a single launch.
    - Solved the `.item()` synchronization trap by maintaining token position offsets directly on device tensors (`index_copy_` and `index_select`).
 

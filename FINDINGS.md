@@ -10,21 +10,21 @@ All raw data is committed in the `results/` folder across three distinct runs: *
 
 When I first got the engine running with eager PyTorch execution, I hit **12.81 tokens/sec** with a Time-To-First-Token (TTFT) of 132ms. For an 8GB RTX 4060, this felt far too slow.
 
-I ran a roofline analysis. For a 4-bit Qwen2.5-3B model at batch size 1, we have to read 2.088 GB of weights from VRAM to generate one token. The arithmetic intensity is 3.03 FLOP/B, which means the operation is heavily memory-bound. The RTX 4060 has a measured memory bandwidth of ~229 GB/s. Therefore, the theoretical floor for token generation was about 9.1ms per token (109 tokens/sec). I was at 76.9ms per token—8.4x off the theoretical limit.
+I ran a roofline analysis. For a 4-bit Qwen2.5-3B model at batch size 1, we have to read 2.074–2.088 GB of weights from VRAM to generate one token. The arithmetic intensity is 3.03 FLOP/B, which means the operation is heavily memory-bound. The RTX 4060 has a measured memory copy bandwidth of ~229 GB/s (datasheet ceiling: 256 GB/s). Therefore, the theoretical floor for token generation was about 9.1ms per token (~109 tokens/sec). Eager execution was at 78.1ms per token (12.81 tok/s)—roughly 8.6x off the theoretical limit.
 
 To find out why, I tried to profile using `torch.profiler` and Nsight Compute. **This completely failed.** CUPTI is fundamentally broken under WSL2, so it recorded zero kernel events. 
 
-Instead, I wrote a custom CUDA event timer. By manually instrumenting the Python execution, I found that the actual GPU kernels were only taking ~17ms per step. The other ~73ms was pure host-side overhead. The engine was launching ~1,630 individual Triton kernels per token (one for each layer, head, and matmul tile). At roughly 45 microseconds per launch, Python was spending 81% of its time just telling the GPU what to do.
+Instead, I wrote a custom timing harness using CUDA events. By comparing eager execution against CUDA graph replays, I measured an eager step time of ~82–90ms vs an actual GPU execution time of ~15–17ms. The other ~67–73ms was pure host-side dispatch and launch overhead. Dispatching ~350+ individual operations per token (GEMMs, attention, RMSNorms, RoPE) through the Python interpreter and CUDA runtime queues meant Python was spending ~81% of its time just telling the GPU what to do.
 
-*(Note: In Run B, I got llama.cpp working as a baseline and it hit 93.06 tok/s. My eager engine was 7.9x slower).*
+*(Note: llama.cpp on the same machine achieved 101.70 tok/s. My eager engine was 7.94x slower).*
 
 ---
 
 ## 2. The Biggest Win: CUDA Graphs (Run C)
 
-To kill the Python launch overhead, I implemented CUDA graphs. The entire decode step (all 1,630 kernel launches) is captured into a single graph and replayed. 
+To eliminate the Python launch overhead, I implemented CUDA graphs. The entire decode step is captured into a single graph and replayed. 
 
-This was the single most effective optimization. Throughput jumped from **12.81 to 68.97 tok/s** (a 5.3x speedup). The p99 latency dropped from 108ms to 15.3ms.
+This was the single most effective optimization. Throughput jumped from **12.81 to 68.97 tok/s** (a 5.4x speedup). The p99 latency dropped from 108ms to 15.3ms.
 
 **What broke during graph capture:**
 *   **The `.item()` trap:** The initial engine passed the token position as a Python integer. A graph freezes all host arguments, so replaying it would have reused one position forever. I had to rewrite the decode step to pass the position as a device tensor, using `index_copy_` for the KV cache and `index_select` for RoPE.
@@ -43,7 +43,7 @@ Two key findings emerged:
 1.  **The default GEMM config was suboptimal for the 4060.** By switching to `BLOCK_N=128` and `BLOCK_K=128` with split-K=8, the `11008x2048` GEMM improved by **1.30x** (from 101.2 µs down to 77.9 µs). The wider tiles increased contiguous memory transactions, improving DRAM efficiency.
 2.  **Split-KV attention does not help at short contexts.** Sweeping splits of 2, 4, and 8 for sequence lengths up to 512 showed that the default split-1 configuration was consistently fastest.
 
-After tuning, final throughput hit **74.14 tokens/sec**, and memory bandwidth utilization improved from 53% to **62.3%** of the hardware ceiling. 
+After tuning, final throughput hit **74.14 tokens/sec**. Memory bandwidth utilization reached **62.3%** of measured copy bandwidth under the isolated profiler trace (14.93ms step time), and **67.2%** in the end-to-end benchmark (13.48ms step time, reading ~153.8 GB/s vs 229.1 GB/s measured copy bandwidth, or 60.1% of the 256 GB/s datasheet ceiling). 
 
 ---
 
